@@ -1,5 +1,9 @@
-<!DOCTYPE html> 
+<?php 
+  //connect to db 
+  require("database.php");
+?>
 
+<!DOCTYPE html> 
 <html lang="en">
 
     <head>

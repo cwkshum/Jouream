@@ -1,3 +1,8 @@
+<?php 
+  //connect to db 
+  require("database.php");
+?>
+
 <!DOCTYPE html> 
 
 <html lang="en">
@@ -30,29 +35,29 @@
 
        <!-- login container -->
        <section>
-            <form>
+            <form action="sign-up-post.php" method="post">
                 <!-- first name -->
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" required>
+                <input type="text" id="first-name" name="first-name" required>
                 
                 <!-- last name -->
                 <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" required>
+                <input type="text" id="last-name" name="last-name" required>
 
                 <!-- email -->
                 <label for="email">Email</label>
-                <input type="text" id="email" required>
+                <input type="text" id="email" name="email" required>
 
                 <!-- password -->
                 <label for="password">Password</label>
-                <input type="password" id="password" required>
+                <input type="password" id="password" name="password" required>
 
                 <!-- confirm password -->
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" required>
+                <input type="password" id="confirm-password" name="confirm-password" required>
 
                 <!-- sign up button -->
-                <input type="submit" value="Sign Up">
+                <input type="submit" name="submit" value="Sign Up">
 
                 <!-- log in link -->
                 <p>Don't Have an Account? <a href="">Log In</a></p>
