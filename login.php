@@ -34,20 +34,20 @@
 
        <!-- login container -->
        <section>
-            <form>
+            <form action="login-post.php" method="post">
                 <!-- email -->
                 <label for="email">Email</label>
-                <input type="text" id="email" required>
+                <input type="text" id="email" name="email" required>
 
                 <!-- password -->
                 <label for="password">Password</label>
-                <input type="password" id="password" required>
+                <input type="password" id="password" name="password" required>
 
                 <!-- log in button -->
-                <input type="submit" value="Log In">
+                <input type="submit" name="submit" value="Log In">
 
                 <!-- sign up link -->
-                <p>Already Have an Account? <a href="">Sign Up</a></p>
+                <p>Already Have an Account? <a href="sign-up.php">Sign Up</a></p>
             </form>
        </section>
 

@@ -60,7 +60,7 @@
                 <input type="submit" name="submit" value="Sign Up">
 
                 <!-- log in link -->
-                <p>Don't Have an Account? <a href="">Log In</a></p>
+                <p>Don't Have an Account? <a href="login.php">Log In</a></p>
             </form>
        </section>
 

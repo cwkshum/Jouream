@@ -19,7 +19,7 @@
         <!-- linked stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
 
-    </head>3
+    </head>
 
     <body>
         <header>
@@ -42,7 +42,7 @@
             $email = "";
             $password = "";
             $cpassword = ""; 
-            $message = "";
+            // $message = "";
             $submission = false;
             $allFields = false;  
             $inputError = false; 
@@ -52,14 +52,14 @@
 			if (isset($_POST["submit"])){
                 // if name isn't empty, post
                 // if empty, say that its required 
-				if (!empty($_POST["first_name"])) {
+				if (!empty($_POST["first-name"])) {
 
                     // check if name only contains letters and whitespace
-                    if (!preg_match("/^[a-zA-Z ]+$/", $_POST["first_name"])) {
+                    if (!preg_match("/^[a-zA-Z ]+$/", $_POST["first-name"])) {
                         $nameError = "Only letters and white space allowed";
                         $inputError = true; 
                     } else { 
-                        $firstName = $_POST["first_name"];
+                        $firstName = $_POST["first-name"];
                         $allFields = true;
                     }
 				} else {
@@ -70,14 +70,14 @@
 
                 // if last name isn't empty, post
                 // if empty, say that its required 
-                if (!empty($_POST["last_name"])) {
+                if (!empty($_POST["last-name"])) {
                     
                     // check if name only contains letters and whitespace
-                    if (!preg_match("/^[a-zA-Z ]+$/", $_POST["last_name"])) {
+                    if (!preg_match("/^[a-zA-Z ]+$/", $_POST["last-name"])) {
                         $nameError = "Only letters and white space allowed";
                         $inputError = true; 
                     } else {
-                        $lastName = $_POST["last_name"];
+                        $lastName = $_POST["last-name"];
                         $allFields = true; 
                     }
 				} else {
@@ -119,8 +119,8 @@
 
                 // if confirmed password isn't empty, post
                 // if empty, say that its required 
-                if (!empty($_POST["confirm_password"])) {
-                    $cpassword = $_POST["confirm_password"]; 
+                if (!empty($_POST["confirm-password"])) {
+                    $cpassword = $_POST["confirm-password"]; 
                     $allFields = true;
                     // check if passwords match
                     if ($cpassword != $password) {
@@ -153,18 +153,52 @@
 
             if($rows == 1){
                 // display error message
+                echo "<h1>Oops!</h1>";
+                echo "<h2>It appears this email has already been registered.</h2>";
+
             } else{
                 if(!$inputError){
                     // Input user's account information into the database
-                    $query = "INSERT into dreamer (first_name, last_name, email, password, avatar) VALUES ('$first_name', '$last_name', '$email', '".md5($password)."', 'default')";
+                    $query = "INSERT into dreamers (first_name, last_name, email, password, avatar) VALUES ('$firstName', '$lastName', '$email', '".md5($password)."', 'default')";
                     $result = mysqli_query($connection, $query);
 
                     if($result){
-                        
+                        // $_SESSION['email'] = $email;
+
+                        // redirect user to their account page
+                        header("Location: account.php");
                     }
+                } else if($passwordError){
+                    // Display Error Message
+                    echo "<h1>Oops!</h1>";
+                    echo "<h2>Passwords entered did not match.</h2>";
+                
+                    // Sign up and Log in links
+                    // echo "<div class='center-content'>";
+                    //     echo "<a href='signup_form.php' class='button'>SIGN UP</a>";
+                    //     echo "<h4 class='container-item'>OR</h4>";
+                    //     echo "<a href='login.php' class='button'>LOG IN</a>";
+                    // echo "</div>";
+
+                } else{
+                    // Display Error Message
+                    echo "<h1>Oops!</h1>";
+                    echo "<h2>Please use valid characters when signing up.</h2>";
+                
+                    // Sign up and Log in links
+                    // echo "<div class='center-content'>";
+                    //     echo "<a href='signup_form.php' class='button'>SIGN UP</a>";
+                    //     echo "<h4 class='container-item'>OR</h4>";
+                    //     echo "<a href='login.php' class='button'>LOG IN</a>";
+                    // echo "</div>";
                 }
             }
 
+            // Release the returned data
+            mysqli_free_result($result);
+
+            // Close the database connection
+            mysqli_close($connection);
         ?>
 
         <!-- footer -->
