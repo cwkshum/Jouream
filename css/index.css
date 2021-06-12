@@ -1,0 +1,25 @@
+/* -------- HERO ----------- */
+#main {
+    height: 100vh;
+}
+
+h1 {
+    margin: 15vh 0 0 0;
+    font-size: 6rem;
+}
+
+#main p {
+   max-width: 42ch;
+}
+
+#main cta {
+    margin-top: 3rem;
+}
+/* -------- END OF HERO ----------- */
+
+
+/* ------------- ABOUT -------------- */
+
+/* ------------- END OF ABOUT -------------- */
+
+

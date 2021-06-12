@@ -16,6 +16,7 @@ h1, h2, h3, h4 {
 h1 {
     /* 48px */
     font-size: 3rem;
+    color: #887B98;
 }
 
 h2 {
@@ -37,6 +38,7 @@ p, a {
     /* 18px */
     font-size: 1.1rem;
     color: #646788;
+    max-width: 66ch;
 }
 
 a {
@@ -53,6 +55,28 @@ a:hover, a:focus, a:active {
 img {
     width: 100%; 
     height: auto;
+}
+
+.cta-container {
+    margin-top: 4rem;
+}
+
+/* call-to-action button */
+.cta {
+    border-radius: 40px;
+    border: 2px solid #887B98;
+    color: #887B98; 
+    padding: 1rem
+}
+
+.cta:hover, .cta:focus, .cta:active {
+    text-decoration: none;
+    color: #FFFFFF; 
+    border: 2px solid #BEA35E;
+    background-color: #BEA35E;
+    transition: background-color 0.3s;
+
+
 }
 
 /* ------------- END OF GENERAL SITE STYLING ---------------- */
@@ -86,6 +110,15 @@ nav {
 }
 
 /* -------------- NAV ------------------ */
+
+/* --------------- FOOTER --------------- */
+.brand {
+    font-family: 'Caveat', Helvetica, Arial, sans-serif;
+}
+
+/* --------------- END OF FOOTER --------------- */
+
+
  
 
 

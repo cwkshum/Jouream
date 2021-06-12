@@ -19,6 +19,7 @@
         <!-- Linked Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
         <link rel="stylesheet" type="text/css" href="css/grids.css"> 
+        <link rel="stylesheet" type="text/css" href="css/index.css"> 
 
     </head>
 
@@ -37,12 +38,14 @@
             </header>
 
             <!-- hero/landing -->
-            <section id="main">
-                <h1>Jouream</h1>
+            <section id="main" class="hero-container">
+                <h1 class="brand">Jouream</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam quis facilisis.</p>
 
                 <!-- CTA -->
-                <a href="">Start Journaling Your Dreams</a>
+                <div class="cta-container">
+                    <a href="" class="cta">Start Journaling Your Dreams</a>
+                </div>
             </section>
 
             <!-- about blurb -->

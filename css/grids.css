@@ -12,6 +12,32 @@
 /* container for body content */
 .body-wrapper {
     grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); 
 }
 
-/* --------------------------------------------------- */
+/* navigation */
+header {
+    grid-column: 1/11;
+}
+
+/* footer */
+footer {
+    grid-column: 1/13;
+}
+
+/* ------------- END OF GENERAL GRIDS ----------------- */
+
+
+/* --------------- INDEX GRIDS ---------------- */
+/* hero section */
+#main {
+    grid-column: 1/10;
+}
+
+#about {
+    grid-row: 3/4;
+}
+/* -------------- END OF INDEX GRIDS ---------------- */
+
+
