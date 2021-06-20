@@ -158,8 +158,14 @@ footer .brand {
     display: flex;
     flex-direction: column;
 }
-
 /* --------------- END OF FOOTER --------------- */
+
+/* ----------- FORMS ----------------- */
+label, input, form {
+    display: block;
+}
+/* ---------- END OF FORMS ------------ */
+
 
 /* ------------- END OF BASIC UI ELEMENTS --------------- */
 

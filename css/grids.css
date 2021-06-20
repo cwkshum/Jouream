@@ -29,14 +29,15 @@ footer {
     grid-column-gap: 4rem;
 }
 
+/* branding in footer + slogan */
 .branding {
     grid-column: 2/6;
 }
 
+/* nav section in footer */
 .footer-nav {
     grid-column: 10/11;
 }
-
 /* ------------- END OF GENERAL GRIDS ----------------- */
 
 
@@ -58,5 +59,29 @@ footer {
     grid-column: 1/11;
 }
 /* -------------- END OF INDEX GRIDS ---------------- */
+
+/* ------------- EXPLORE PAGE GRIDS ----------------- */
+#header {
+    grid-column: 1/12;
+}
+
+.popup-content {
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.popup-content h2 {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2
+}
+
+.popup-content .close {
+    grid-column: 7 / 8;
+    grid-row: 1 / 2
+}
+
+/* ----------- END OF EXPLORE PAGE GRIDS ------------- */
+
 
 
