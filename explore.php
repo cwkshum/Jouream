@@ -24,13 +24,14 @@
     <body>
         <header>
             <!-- navigation -->
-            <nav>
+            <!-- <nav>
                 <a href="index.php">Home</a>
                 <a href="explore.php">Explore</a>
-
-                <!-- **IMPORTANT**: CHANGE SIGN UP AFTER AUTHENTICATION IMPLEMENTATION -->
                 <a href="login.php">Login/Sign Up</a>
-            </nav>
+            </nav> -->
+            <?php 
+                include("navigation-check.php"); 
+            ?>
         </header>
 
         <!-- explore header -->

@@ -1,6 +1,8 @@
 <?php 
   //connect to db 
   require("database.php");
+
+  include("session-not-active-check.php");
 ?>
 
 <!DOCTYPE html> 

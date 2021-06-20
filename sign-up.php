@@ -35,7 +35,29 @@
 
        <!-- login container -->
        <section>
-            <form action="sign-up-post.php" method="post">
+            <!-- <form action="sign-up-post.php" method="post">
+
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <input type="submit" name="submit" value="Sign Up">
+
+                <p>Don't Have an Account? <a href="login.php">Log In</a></p>
+            </form> -->
+
+            <form>
                 <!-- first name -->
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" name="first-name" required>
@@ -93,6 +115,9 @@
             </div>
         </footer>
 
-
+        <!-- Linked JavaScript Files -->
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="js/sign-up-validation.js"></script>
+        <script src="js/sign-up.js"></script>
     </body> 
 </html>

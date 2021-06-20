@@ -34,7 +34,19 @@
 
        <!-- login container -->
        <section>
-            <form action="login-post.php" method="post">
+            <!-- <form action="login-post.php" method="post">
+                
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <input type="submit" name="submit" value="Log In">
+
+                <p>Already Have an Account? <a href="sign-up.php">Sign Up</a></p>
+            </form> -->
+
                 <!-- email -->
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" required>
@@ -44,7 +56,8 @@
                 <input type="password" id="password" name="password" required>
 
                 <!-- log in button -->
-                <input type="submit" name="submit" value="Log In">
+                <!-- <input type="submit" name="submit" value="Log In"> -->
+                <button class="login" value="Log In">Log In</button>
 
                 <!-- sign up link -->
                 <p>Already Have an Account? <a href="sign-up.php">Sign Up</a></p>
@@ -80,6 +93,9 @@
             </div>
         </footer>
 
+        <!-- Linked JavaScript Files -->
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="js/login.js"></script>
 
     </body> 
 </html>

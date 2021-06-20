@@ -1,6 +1,8 @@
 <?php 
   //connect to db 
   require("database.php");
+
+  include("session-not-active-check.php");
 ?>
 
 <!DOCTYPE html> 
@@ -29,9 +31,7 @@
                 <a href="explore.php">Explore</a>
                 <a href="entries.php">Entries</a>
                 <a href="account.php">Account</a>
-
-                <!-- **IMPORTANT**: CHANGE SIGN UP AFTER AUTHENTICATION IMPLEMENTATION -->
-                <a href="">Log Out</a>
+                <a href="logout.php">Log Out</a>
             </nav>
         </header>
 
