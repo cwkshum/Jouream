@@ -24,6 +24,17 @@ header {
 /* footer */
 footer {
     grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    grid-column-gap: 4rem;
+}
+
+.branding {
+    grid-column: 2/6;
+}
+
+.footer-nav {
+    grid-column: 10/11;
 }
 
 /* ------------- END OF GENERAL GRIDS ----------------- */
@@ -35,8 +46,16 @@ footer {
     grid-column: 1/10;
 }
 
+/* about section */
 #about {
     grid-row: 3/4;
+    grid-column: 4/8;
+}
+
+/* recent entries card grid */
+#recent-entries {
+    grid-row: 4/5;
+    grid-column: 1/11;
 }
 /* -------------- END OF INDEX GRIDS ---------------- */
 

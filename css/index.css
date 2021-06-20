@@ -19,6 +19,17 @@ h1 {
 
 
 /* ------------- ABOUT -------------- */
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+
+    margin: 1rem 0 18rem 0;
+}
+/* --------- END OF ABOUT -------------- */
+
 
 /* ------------- END OF ABOUT -------------- */
 

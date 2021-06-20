@@ -55,37 +55,52 @@
 
             <!-- recent entries -->
             <section id="recent-entries">
+                <h2>Recent Entries</h2>
+                <div class="entry-card">
+                    <h3 class="entry-card-title">Vampire Baseball</h3>
+                    <p class="entry-card-date">June 13, 2021</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam quis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie.</p>
+
+                    <!-- tags -->
+                    <a href="" class="entry-card-link">#vampire</a>
+                    
+                    <hr class="entry-card-line">
+                    <div class="cont-reading">
+                        <a href="" class="entry-card-link">continue reading <img src="img/right-arrow.svg" alt="right arrow icon"></a>
+                    </div>
+                </div>
             </section>
-
-            <!-- footer -->
-            <footer>
-                <!-- branding -->
-                <div>
-                    <h3>Jouream</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>© 2021 Carissa Shum & Rowina Chan</p>
-                </div>
-
-                <!-- navigation -->
-                <div>
-                    <h3>Navigation</h3>
-                    <a href="index.php">Home</a>
-                    <a href="explore.php">Explore</a>
-                    <a href="index.php/#about">About</a>
-
-                    <!-- **IMPORTANT**: CHANGE FOOTER CONTENT AFTER AUTHENTICATION IMPLEMENTATION -->
-                    <a href="entries.php">Entries</a>
-                    <a href="account.php">Account</a>
-                </div>
-
-                <!-- resources -->
-                <div>
-                    <h3>Resources</h3>
-                    <a href="style-guide.html">Style Guide</a>
-                    <a href="citations.html">Citations</a>
-                </div>
-            </footer>
-
         </div>
+
+        <!-- footer -->
+        <footer>
+            <!-- branding -->
+            <div class="branding">
+                <h2 class="brand">Jouream</h2>
+                <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="copyright">© 2021 Carissa Shum & Rowina Chan</p>
+            </div>
+
+            <!-- navigation -->
+            <div class="footer-nav">
+                <h3>Navigation</h3>
+                <a href="index.php">Home</a>
+                <a href="explore.php">Explore</a>
+                <a href="index.php/#about">About</a>
+
+                <!-- **IMPORTANT**: CHANGE FOOTER CONTENT AFTER AUTHENTICATION IMPLEMENTATION -->
+                <a href="entries.php">Entries</a>
+                <a href="account.php">Account</a>
+            </div>
+
+            <!-- resources -->
+            <div class="resources">
+                <h3>Resources</h3>
+                <a href="style-guide.html">Style Guide</a>
+                <a href="citations.html">Citations</a>
+            </div>
+        </footer>
+
+    
     </body> 
 </html>
