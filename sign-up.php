@@ -1,5 +1,5 @@
 <?php 
-  //connect to db 
+  // connect to db 
   require("database.php");
 ?>
 
@@ -18,6 +18,7 @@
         
         <!-- Linked Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
+        <link rel="stylesheet" type="text/css" href="css/sign-up.css"> 
 
     </head>
 
@@ -27,61 +28,42 @@
             <nav>
                 <a href="index.php">Home</a>
                 <a href="explore.php">Explore</a>
-
-                <!-- **IMPORTANT**: CHANGE SIGN UP AFTER AUTHENTICATION IMPLEMENTATION -->
                 <a href="login.php">Login/Sign Up</a>
             </nav>
         </header>
 
        <!-- login container -->
        <section>
-            <!-- <form action="sign-up-post.php" method="post">
+            <!-- first name -->
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+            <p id="first-name-validation"></p>
+            
+            <!-- last name -->
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+            <p id="last-name-validation"></p>
 
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" required>
+            <!-- email -->
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+            <p id="email-validation"></p>
+            <p id="email-taken"></p>
 
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name" required>
+            <!-- password -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" onkeyup="passwordCheck()" required>
 
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" required>
+            <!-- confirm password -->
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" onkeyup="passwordCheck()" required>
+            <p id='password-message'></p>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+            <!-- sign up button -->
+            <button id="sign-up" class="sign-up" value="Sign Up" disabled="true">Sign Up</button>
 
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-
-                <input type="submit" name="submit" value="Sign Up">
-
-                <p>Don't Have an Account? <a href="login.php">Log In</a></p>
-            </form> -->
-
-                <!-- first name -->
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" required>
-                
-                <!-- last name -->
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name" required>
-
-                <!-- email -->
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" required>
-
-                <!-- password -->
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" onkeyup="passwordCheck()" required>
-
-                <!-- confirm password -->
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" onkeyup="passwordCheck()" required>
-
-                <!-- sign up button -->
-                <button id="sign-up" class="sign-up" value="Sign Up" disabled="true">Sign Up</button>
-
-                <!-- log in link -->
-                <p>Don't Have an Account? <a href="login.php">Log In</a></p>
+            <!-- log in link -->
+            <p>Don't Have an Account? <a href="login.php">Log In</a></p>
        </section>
 
         <!-- footer -->
@@ -115,7 +97,6 @@
 
         <!-- Linked JavaScript Files -->
         <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <!-- <script src="js/sign-up-validation.js"></script> -->
         <script src="js/sign-up.js"></script>
     </body> 
 </html>

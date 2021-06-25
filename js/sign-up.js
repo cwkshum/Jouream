@@ -3,13 +3,14 @@ var lastNameValid = false;
 var emailValid = false;
 var passwordValid = false;
 
+// email validation
 $("#email").blur(function(){
     var email = $(this).val();
     emailValidation(email);
 
     // if the email input is empty, dont show a message
     if(email == ""){
-        // $("#msg").fadeOut();
+        $("#email-taken").fadeOut();
     } else {
         $.ajax({
             url: 'sign-up-post.php',
@@ -22,111 +23,113 @@ $("#email").blur(function(){
 
                 //if there is more than result, provide a message that tells the user the email is already in use
                 if (result == 1) {
-                    // string += 'This email is already in use.';
+                    string += 'This email is already in use.';
                     emailValid = false;
                 } else{
                     emailValid = true;
                 }
                 // Show response
-                // $("#email-taken-msg").fadeIn().html(string);
+                $("#email-taken").fadeIn().html(string);
                 enableSubmit();
             }
         });
     }
 });
 
+// first name validation
 $("#first-name").blur(function(){
     var firstName = document.getElementById('first-name').value;
     var invalid = /^[a-zA-Z\s]+$/;
 
-    //if there is an input in the first name box, a message is allowed to be displayed
     if (firstName != ''){ 
-        //if the input matches any invalid characters, let the user know
-        if (invalid.test(firstName)  === false){
-            // document.getElementById('first-name-validation').style.color = '#9c4b49';
-            // document.getElementById('first-name-validation').innerHTML = 'Only letters and white space allowed!';
+        if (invalid.test(firstName) === false){
+            // if the input in the first name box has invalid characters, display a message
+            document.getElementById('first-name-validation').style.color = '#9c4b49';
+            document.getElementById('first-name-validation').innerHTML = 'Only letters and white space allowed!';
             firstNameValid = false;
-        }  else {
+        } else {
             //if the name has been entered properly, don't display a message 
-            // document.getElementById('first-name-validation').style.color = 'white';
-            // document.getElementById('first-name-validation').innerHTML = '';
+            document.getElementById('first-name-validation').style.color = 'white';
+            document.getElementById('first-name-validation').innerHTML = '';
             firstNameValid = true;
         }
     } else{
-        // document.getElementById('first-name-validation').style.color = 'white';
-        // document.getElementById('first-name-validation').innerHTML = '';
+        document.getElementById('first-name-validation').style.color = 'white';
+        document.getElementById('first-name-validation').innerHTML = '';
         firstNameValid = false;
     }
     enableSubmit();
 });
 
+// last name validation
 $("#last-name").blur(function(){
     var lastName = document.getElementById('last-name').value;
     var invalid = /^[a-zA-Z\s]+$/;
 
     if (lastName != ''){ 
-        //if there is an input in the last name box, a message is allowed to be displayed
         if (invalid.test(lastName)  === false){
-            // document.getElementById('last-name-validation').style.color = '#9c4b49';
-            // document.getElementById('last-name-validation').innerHTML = 'Only letters and white space allowed!';
+            // if the input in the last name box has invalid characters, display a message
+            document.getElementById('last-name-validation').style.color = '#9c4b49';
+            document.getElementById('last-name-validation').innerHTML = 'Only letters and white space allowed!';
             lastNameValid = false;
-        }  else {
+        } else {
             //if the name has been entered properly, don't display a message
-            // document.getElementById('last-name-validation').style.color = 'white';
-            // document.getElementById('last-name-validation').innerHTML = '';
+            document.getElementById('last-name-validation').style.color = 'white';
+            document.getElementById('last-name-validation').innerHTML = '';
             lastNameValid = true;
         }
     } else{
-        // document.getElementById('last-name-validation').style.color = 'white';
-        // document.getElementById('last-name-validation').innerHTML = '';
+        document.getElementById('last-name-validation').style.color = 'white';
+        document.getElementById('last-name-validation').innerHTML = '';
         lastNameValid = false;
     }
     enableSubmit();
 });
 
-
+// check email for invalid characters
 function emailValidation(email){
     var invalid = /^\S+@\S+\.\S+$/;
 
     if (email != ''){ 
-        //if there is an input in the email box, a message is allowed to be displayed
         if (invalid.test(email)  === false){
-            // document.getElementById('email-validation-msg').style.color = '#9c4b49';
-            // document.getElementById('email-validation-msg').innerHTML = 'Pleae use a valid email!';
-        }  else {
-            //if the name has been entered properly, don't display a message
-            // document.getElementById('email-validation-msg').style.color = 'white';
-            // document.getElementById('email-validation-msg').innerHTML = '';
+            // if the input in the email box has invalid characters, display a message
+            document.getElementById('email-validation').style.color = '#9c4b49';
+            document.getElementById('email-validation').innerHTML = 'Pleae use a valid email!';
+        } else {
+            // if the name has been entered properly, don't display a message
+            document.getElementById('email-validation').style.color = 'white';
+            document.getElementById('email-validation').innerHTML = '';
         }
     } else{
-        // document.getElementById('email-validation-msg').style.color = 'white';
-        // document.getElementById('email-validation-msg').innerHTML = '';
+        document.getElementById('email-validation').style.color = 'white';
+        document.getElementById('email-validation').innerHTML = '';
     }
 }
 
-
+// password validation
 function passwordCheck(){
-    if((document.getElementById('password').value) != ''){    
+    if((document.getElementById('password').value) != '' && (document.getElementById('confirm-password').value) != ''){    
         //if the passwords matching show 'Matching'
         if (document.getElementById('password').value == document.getElementById('confirm-password').value) {
-            // document.getElementById('password-message').style.color = 'green';
-            // document.getElementById('password-message').innerHTML = 'Passwords Matching';
+            document.getElementById('password-message').style.color = 'green';
+            document.getElementById('password-message').innerHTML = 'Passwords Matching';
             passwordValid = true;
         } else {
             //if the passwords don't match, show 'Passwords Not matching'
-            // document.getElementById('password-message').style.color = '#9c4b49';
-            // document.getElementById('password-message').innerHTML = 'Passwords Not Matching';
+            document.getElementById('password-message').style.color = '#9c4b49';
+            document.getElementById('password-message').innerHTML = 'Passwords Not Matching';
             passwordValid = false;
         }
     } else{
         //if no passwords have been entered, don't show a message
-        // document.getElementById('password-message').style.color = 'white';
-        // document.getElementById('password-message').innerHTML = '';
+        document.getElementById('password-message').style.color = 'white';
+        document.getElementById('password-message').innerHTML = '';
         passwordValid = false;
     }
     enableSubmit();
 }
 
+// enable submit button check
 function enableSubmit(){
     if(firstNameValid && lastNameValid && emailValid && passwordValid){
         document.getElementById("sign-up").disabled = false;
@@ -135,6 +138,7 @@ function enableSubmit(){
     }
 }
 
+// add sign up information to database
 $(document).on('click', '#sign-up', function(){
     var firstName = $("#first-name").val();
     var lastName = $("#last-name").val();
@@ -153,10 +157,7 @@ $(document).on('click', '#sign-up', function(){
             if(result){
                 // user logged in successfully, redirect to account page
                 window.location.replace("account.php");
-            } else{
-                // show error message
-                window.alert("sign up error");
-            }
+            } 
         },
     });
 });
