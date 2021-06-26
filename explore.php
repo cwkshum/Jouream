@@ -54,34 +54,66 @@
 
             <!-- popup content -->
             <div class="popup-content">
-                <!-- <span class="close">&times;</span> -->
-                <!-- <div class="content"> -->
+                <!-- exit button -->
                 <span class="close">&times;</span>
                 <h2>New Entry</h2>
-                <form>
-                    <div>
-                        <label for="title">Dream Title</label>
-                        <input type="text" id="title" name="title" required>
-                    </div>
-
-                    <div>
-                        <label for="date">Date</label>
-                        <input type="date" id="date" name="date" min="1950-01-01" required>
-                    </div>
-
-                    <div>
-                        <label for="duration">Duration of Sleep</label>
-                        <input type="text" id="hours" name="hours"><p>hrs</p>
-                        <input type="text" id="minutes" name="minutes"><p>mins</p>
-                    </div>
-
-                    <div>
-                        <label for="description">Description</label>
-                        <textarea rows="4" cols="50" id="description" name="description"></textarea>
-                    </div>
-                </form>
+                    <div id="entry-form">
                     
-                <!-- </div> -->
+                        <!-- entry title -->
+                        <div id="entry-title">
+                            <label for="title" class="entry-label">Dream Title</label>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+
+                        <!-- entry date -->
+                        <div id="entry-date">
+                            <label for="date" class="entry-label">Date</label>
+                            <input type="date" id="date" name="date" min="1950-01-01" required>
+                        </div>
+
+                        <!-- duration of sleep -->
+                        <div id="entry-duration">
+                            <label for="duration" class="entry-label">Duration of Sleep</label>
+                            <input type="number" id="hours" name="hours" min="0"><p> hrs</p>
+                            <input type="number" id="minutes" name="minutes" min="0" max="59"><p> mins</p>
+                        </div>
+
+                        <!-- duration of sleep -->
+                        <div id="entry-rating">
+                            <label for="rating" class="entry-label">Dream Rating</label>
+                            <input type="radio" id="rating" name="rating">
+                        </div>
+
+                        <!-- entry description -->
+                        <div id="entry-description">
+                            <label for="description" class="entry-label">Description</label>
+                            <textarea id="description" name="description"></textarea>
+                        </div>
+
+                        <!-- tags -->
+                        <div id="entry-tags">
+                            <label for="tag-input" class="entry-label">Tags</label>
+                            <input type="text" id="tag-input">  
+                        </div>
+
+                        <!-- visibility -->
+                        <div id="entry-visibility">
+                            <p class="faux-label">Visibility</p>
+                            <input type="radio" id="private" name="visibility" value="private" required>
+                            <label for="private" class="entry-label">Private</label>
+                            <input type="radio" id="public" name="visibility" value="public">
+                            <label for="public" class="entry-label">Public</label>
+                        </div>
+
+                        <div id="entry-actions">
+                            <!-- save draft -->
+                            <button type="button" id="draft">Save Draft</button>
+                            <!-- publish draft -->
+                            <button type="button" id="publish">Publish Entry</button>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
 
             <section id="posts-container">
@@ -120,6 +152,7 @@
 
         <!-- javascript links -->
         <script src="js/create.js"></script>
+        <script src="js/tags.js"></script>
 
     </body> 
 </html>
