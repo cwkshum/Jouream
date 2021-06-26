@@ -20,6 +20,7 @@
         
         <!-- Linked Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
+        <link rel="stylesheet" type="text/css" href="css/grids.css">
 
     </head>
 
@@ -43,6 +44,19 @@
 
         <!-- filters section -->
         <section id="filters">
+            <!-- sort by filter -->
+            <label for="sort">Sort by:</label>
+            <select id="sort" name="sort" onchange="sortFilter()">
+                <option value="recent">Most Recent</option>
+                <option value="oldest">Oldest</option>
+            </select>
+
+            <!-- tag filter -->
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" name="tags">
+
+            <!-- search filter -->
+            <input type="text" id="search" name="search" onkeyup="searchFilter()">
             
         </section>
 
@@ -51,20 +65,20 @@
         
         <!-- entries section -->
         <section id="entries-container">
-
+            <div id="entries"></div>
         </section>
 
         <!-- footer -->
         <footer>
             <!-- branding -->
-            <div>
-                <h3>Jouream</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>© 2021 Carissa Shum & Rowina Chan</p>
+            <div class="branding">
+                <h2 class="brand">Jouream</h2>
+                <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="copyright">© 2021 Carissa Shum & Rowina Chan</p>
             </div>
 
-           <!-- navigation -->
-           <div>
+            <!-- navigation -->
+            <div class="footer-nav">
                 <h3>Navigation</h3>
                 <a href="index.php">Home</a>
                 <a href="explore.php">Explore</a>
@@ -76,13 +90,16 @@
             </div>
 
             <!-- resources -->
-            <div>
+            <div class="resources">
                 <h3>Resources</h3>
                 <a href="style-guide.html">Style Guide</a>
                 <a href="citations.html">Citations</a>
             </div>
         </footer>
 
+        <!-- Linked JavaScript Files -->
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="js/entries.js"></script>
 
     </body> 
 </html>

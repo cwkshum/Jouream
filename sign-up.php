@@ -18,7 +18,7 @@
         
         <!-- Linked Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
-        <link rel="stylesheet" type="text/css" href="css/sign-up.css"> 
+        <link rel="stylesheet" type="text/css" href="css/grids.css">
 
     </head>
 
@@ -69,14 +69,14 @@
         <!-- footer -->
         <footer>
             <!-- branding -->
-            <div>
-                <h3>Jouream</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>© 2021 Carissa Shum & Rowina Chan</p>
+            <div class="branding">
+                <h2 class="brand">Jouream</h2>
+                <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="copyright">© 2021 Carissa Shum & Rowina Chan</p>
             </div>
 
             <!-- navigation -->
-            <div>
+            <div class="footer-nav">
                 <h3>Navigation</h3>
                 <a href="index.php">Home</a>
                 <a href="explore.php">Explore</a>
@@ -88,7 +88,7 @@
             </div>
 
             <!-- resources -->
-            <div>
+            <div class="resources">
                 <h3>Resources</h3>
                 <a href="style-guide.html">Style Guide</a>
                 <a href="citations.html">Citations</a>

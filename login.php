@@ -17,6 +17,7 @@
         
         <!-- Linked Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
+        <link rel="stylesheet" type="text/css" href="css/grids.css">
 
     </head>
 
@@ -34,47 +35,33 @@
 
        <!-- login container -->
        <section>
-            <!-- <form action="login-post.php" method="post">
-                
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" required>
-                
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-                
-                <input type="submit" name="submit" value="Log In">
+            <!-- email -->
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
 
-                <p>Already Have an Account? <a href="sign-up.php">Sign Up</a></p>
-            </form> -->
+            <!-- password -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
 
-                <!-- email -->
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" required>
+            <!-- log in button -->
+            <!-- <input type="submit" name="submit" value="Log In"> -->
+            <button class="login" value="Log In">Log In</button>
 
-                <!-- password -->
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-
-                <!-- log in button -->
-                <!-- <input type="submit" name="submit" value="Log In"> -->
-                <button class="login" value="Log In">Log In</button>
-
-                <!-- sign up link -->
-                <p>Already Have an Account? <a href="sign-up.php">Sign Up</a></p>
-            </form>
+            <!-- sign up link -->
+            <p>Already Have an Account? <a href="sign-up.php">Sign Up</a></p>
        </section>
-
+       
         <!-- footer -->
         <footer>
             <!-- branding -->
-            <div>
-                <h3>Jouream</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>© 2021 Carissa Shum & Rowina Chan</p>
+            <div class="branding">
+                <h2 class="brand">Jouream</h2>
+                <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="copyright">© 2021 Carissa Shum & Rowina Chan</p>
             </div>
 
-             <!-- navigation -->
-             <div>
+            <!-- navigation -->
+            <div class="footer-nav">
                 <h3>Navigation</h3>
                 <a href="index.php">Home</a>
                 <a href="explore.php">Explore</a>
@@ -86,7 +73,7 @@
             </div>
 
             <!-- resources -->
-            <div>
+            <div class="resources">
                 <h3>Resources</h3>
                 <a href="style-guide.html">Style Guide</a>
                 <a href="citations.html">Citations</a>
