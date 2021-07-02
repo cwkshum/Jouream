@@ -78,10 +78,41 @@
                             <input type="number" id="minutes" name="minutes" min="0" max="59"><p> mins</p>
                         </div>
 
-                        <!-- duration of sleep -->
+                        <!-- rating of sleep -->
                         <div id="entry-rating">
-                            <label for="rating" class="entry-label">Dream Rating</label>
-                            <input type="radio" id="rating" name="rating">
+                            <!-- dream rating label -->
+                            <p class="faux-label">Dream Rating</p>
+
+                            <!-- 5/5 rating -->
+                            <input type="radio" id="5" name="rating">
+                            <label for="5" class="entry-label">
+                                <img src="img/happy-5.svg" alt="a rating of 5 out of 5.">
+                            </label>
+
+                            <!-- 4/5 rating -->
+                            <input type="radio" id="4" name="rating">
+                            <label for="4" class="entry-label">
+                                <img src="img/okay-4.svg" alt="a rating of 4 out of 5.">
+                            </label>
+                           
+
+                             <!-- 3/5 rating -->
+                             <input type="radio" id="3" name="rating">
+                             <label for="3" class="entry-label">
+                                <img src="img/neutral-3.svg" alt="a rating of 3 out of 5.">
+                            </label>
+
+                            <!-- 2/5 rating -->
+                            <input type="radio" id="2" name="rating">
+                             <label for="2" class="entry-label">
+                                <img src="img/sad-2.svg" alt="a rating of 2 out of 5.">
+                            </label>
+
+                            <!-- 1/5 rating -->
+                            <input type="radio" id="1" name="rating">
+                             <label for="1" class="entry-label">
+                                <img src="img/terrible-1.svg" alt="a rating of 1 out of 5.">
+                            </label>
                         </div>
 
                         <!-- entry description -->

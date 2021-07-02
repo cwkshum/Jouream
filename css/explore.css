@@ -147,6 +147,31 @@ input[type=number] {
 }
 
 
+/* ------- RATING FACES ------------ */
+#entry-rating img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.25rem;
+}
+
+#entry-rating img:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+input[type=radio]:checked + label > img {
+  border: 1px solid rgb(228, 207, 94);
+}
+
+#entry-rating label {
+  display: inline-block;
+}
+
+#entry-rating input[type=radio] {
+  display: none;
+}
+/* ------- END OF RATING FACES ------------ */
+
 
 
 
