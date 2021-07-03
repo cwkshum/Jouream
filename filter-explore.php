@@ -1,7 +1,6 @@
 <?php
     // connect to db
     require("database.php");
-    require("session-not-active-check.php");
 
     $whereSearchQuery = "";
     $whereTagsQuery = "";
@@ -9,12 +8,11 @@
     $order = $_POST["sort"];
     $tags = $_POST["tags"];
 
-    $query = "SELECT * FROM entries WHERE dreamer_email = '" . $_SESSION['email'] . "'";
-    // $query = "SELECT * FROM entries";
+    $query = "SELECT * FROM entries";
 
     // filter entries by search
     if(!empty($search)){
-        $whereSearchQuery .= " AND title LIKE '%$search%' OR tags LIKE '%$search%' OR content LIKE '%$search%'";
+        $whereSearchQuery .= " WHERE AND title LIKE '%$search%' OR tags LIKE '%$search%' OR content LIKE '%$search%'";
         $query .= $whereSearchQuery;
     }
 
@@ -23,9 +21,16 @@
         if(!empty($whereSearchQuery)){
             $whereTagsQuery .= " AND tags LIKE '%$tags%'";
         } else{
-            $whereTagsQuery .= " tags LIKE '%$tags%'";
+            $whereTagsQuery .= " WHERE tags LIKE '%$tags%'";
         }
         $query .= $whereTagsQuery; 
+    }
+
+    // only display public entries
+    if(!empty($whereSearchQuery) || !empty($whereTagsQuery)){
+        $query .= " AND visibility = true";
+    } else{
+        $query .= " WHERE visibility = false";
     }
 
     // order the entries by the selected sort option

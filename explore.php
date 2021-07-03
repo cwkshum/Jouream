@@ -63,6 +63,7 @@
                         <div id="entry-title">
                             <label for="title" class="entry-label">Dream Title</label>
                             <input type="text" id="title" name="title" required>
+                            <p id="title-taken"></p>
                         </div>
 
                         <!-- entry date -->
@@ -84,32 +85,32 @@
                             <p class="faux-label">Dream Rating</p>
 
                             <!-- 5/5 rating -->
-                            <input type="radio" id="5" name="rating">
+                            <input type="radio" id="5" name="rating" class="rating" value="5">
                             <label for="5" class="entry-label">
                                 <img src="img/happy-5.svg" alt="a rating of 5 out of 5.">
                             </label>
 
                             <!-- 4/5 rating -->
-                            <input type="radio" id="4" name="rating">
+                            <input type="radio" id="4" name="rating" class="rating" value="4">
                             <label for="4" class="entry-label">
                                 <img src="img/okay-4.svg" alt="a rating of 4 out of 5.">
                             </label>
                            
 
                              <!-- 3/5 rating -->
-                             <input type="radio" id="3" name="rating">
+                             <input type="radio" id="3" name="rating" class="rating" value="3">
                              <label for="3" class="entry-label">
                                 <img src="img/neutral-3.svg" alt="a rating of 3 out of 5.">
                             </label>
 
                             <!-- 2/5 rating -->
-                            <input type="radio" id="2" name="rating">
+                            <input type="radio" id="2" name="rating" class="rating" value="2">
                              <label for="2" class="entry-label">
                                 <img src="img/sad-2.svg" alt="a rating of 2 out of 5.">
                             </label>
 
                             <!-- 1/5 rating -->
-                            <input type="radio" id="1" name="rating">
+                            <input type="radio" id="1" name="rating" class="rating" value="1">
                              <label for="1" class="entry-label">
                                 <img src="img/terrible-1.svg" alt="a rating of 1 out of 5.">
                             </label>
@@ -130,9 +131,9 @@
                         <!-- visibility -->
                         <div id="entry-visibility">
                             <p class="faux-label">Visibility</p>
-                            <input type="radio" id="private" name="visibility" value="private" required>
+                            <input type="radio" id="private" class="visibility" name="visibility" value="private" required>
                             <label for="private" class="entry-label">Private</label>
-                            <input type="radio" id="public" name="visibility" value="public">
+                            <input type="radio" id="public" class="visibility" name="visibility" value="public">
                             <label for="public" class="entry-label">Public</label>
                         </div>
 
@@ -140,7 +141,7 @@
                             <!-- save draft -->
                             <button type="button" id="draft">Save Draft</button>
                             <!-- publish draft -->
-                            <button type="button" id="publish">Publish Entry</button>
+                            <button type="button" id="publish" disabled="true">Publish Entry</button>
                         </div>
                     </div>
                     
@@ -182,8 +183,10 @@
         </footer>
 
         <!-- javascript links -->
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="js/create.js"></script>
         <script src="js/tags.js"></script>
+        <script src="js/add-entry.js"></script>
 
     </body> 
 </html>

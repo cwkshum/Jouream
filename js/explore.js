@@ -6,9 +6,10 @@ $(document).ready(function(){
     displayEntries();
 });
 
+// display the public entries to the explore page
 function displayEntries(){
     $.ajax({
-        url:"filter-entries.php",
+        url:"filter-explore.php",
         method:"POST",
         data:{search:search, tags:tags, sort:sort},
 
@@ -18,7 +19,7 @@ function displayEntries(){
 
             var string = '';
 
-            if(result == ''){
+            if(result == ''){ 
                 string += "<p>Oops! It appears there are no entries found!</p>";
             }
 
