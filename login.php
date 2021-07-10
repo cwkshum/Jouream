@@ -18,39 +18,52 @@
         <!-- Linked Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
         <link rel="stylesheet" type="text/css" href="css/grids.css">
+        <link rel="stylesheet" type="text/css" href="css/account-access.css">
 
     </head>
 
-    <body>
-        <header>
-            <!-- navigation -->
-            <nav>
-                <a href="index.php">Home</a>
-                <a href="explore.php">Explore</a>
+    <body class="main-body-grid">
+        <div class="body-wrapper">
+            <header>
+                <!-- navigation -->
+                <nav>
+                    <a href="index.php">Home</a>
+                    <a href="explore.php">Explore</a>
 
-                <!-- **IMPORTANT**: CHANGE SIGN UP AFTER AUTHENTICATION IMPLEMENTATION -->
-                <a href="login.php">Login/Sign Up</a>
-            </nav>
-        </header>
+                    <!-- **IMPORTANT**: CHANGE SIGN UP AFTER AUTHENTICATION IMPLEMENTATION -->
+                    <a href="login.php">Login/Sign Up</a>
+                </nav>
+            </header>
 
-       <!-- login container -->
-       <section>
-            <!-- email -->
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" required>
+            <h1 id="login">Login</h1>
 
-            <!-- password -->
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+            <!-- login container -->
+            <section id="login-form">
+                <div id="login-content">
+                    <!-- email -->
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" required>
 
-            <!-- log in button -->
-            <!-- <input type="submit" name="submit" value="Log In"> -->
-            <button class="login" value="Log In">Log In</button>
+                    <!-- password -->
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
 
-            <!-- sign up link -->
-            <p>Already Have an Account? <a href="sign-up.php">Sign Up</a></p>
-       </section>
-       
+
+                    <!-- login button and redirection -->
+                    <div class="cta-access">
+                        <!-- log in button -->
+                        <!-- <input type="submit" name="submit" value="Log In"> -->
+                        <div class="cta-container">
+                            <button class="cta" value="Log In">Log In</button>
+                        </div>
+    
+                        <!-- sign up link -->
+                        <p>Already Have an Account? <a href="sign-up.php">Sign Up</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+            
         <!-- footer -->
         <footer>
             <!-- branding -->
@@ -83,6 +96,5 @@
         <!-- Linked JavaScript Files -->
         <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="js/login.js"></script>
-
     </body> 
 </html>

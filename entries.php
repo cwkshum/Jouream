@@ -24,49 +24,56 @@
 
     </head>
 
-    <body>
-        <header>
-            <!-- navigation -->
-            <nav>
-                <a href="index.php">Home</a>
-                <a href="explore.php">Explore</a>
-                <a href="entries.php">Entries</a>
-                <a href="account.php">Account</a>
-                <a href="logout.php">Log Out</a>
-            </nav>
-        </header>
+    <body class="main-body-grid">
+        <div class="body-wrapper">
+            <header>
+                <!-- navigation -->
+                <nav>
+                    <a href="index.php">Home</a>
+                    <a href="explore.php">Explore</a>
+                    <a href="entries.php">Entries</a>
+                    <a href="account.php">Account</a>
+                    <a href="logout.php">Log Out</a>
+                </nav>
+            </header>
 
-        <!-- entries header -->
-        <section id="header">
-            <h1>Entries</h1>
+            <!-- entries header -->
+            <section id="header">
+                <h1>Entries</h1>
 
-        </section>
+            </section>
 
-        <!-- filters section -->
-        <section id="filters">
-            <!-- sort by filter -->
-            <label for="sort">Sort by:</label>
-            <select id="sort" name="sort" onchange="sortFilter()">
-                <option value="recent">Most Recent</option>
-                <option value="oldest">Oldest</option>
-            </select>
+            <!-- filters section -->
+            <section id="filters">
+                <!-- sort by filter -->
+                <label for="sort">Sort by:</label>
+                <select id="sort" name="sort" onchange="sortFilter()">
+                    <option value="recent">Most Recent</option>
+                    <option value="oldest">Oldest</option>
+                </select>
 
-            <!-- tag filter -->
-            <label for="tags">Tags:</label>
-            <input type="text" id="tags" name="tags">
+                <!-- tag filter -->
+                <label for="tags">Tags:</label>
+                <input type="text" id="tags" name="tags">
 
-            <!-- search filter -->
-            <input type="text" id="search" name="search" onkeyup="searchFilter()">
+                <div id="entry-tags">
+                    <label for="tag-input" class="entry-label">Tags</label>
+                    <input type="text" id="tag-input">  
+                </div>
+
+                <!-- search filter -->
+                <input type="text" id="search" name="search" onkeyup="searchFilter()">
+                
+            </section>
+
+            <!-- create post -->
+            <!-- <button></button> -->
             
-        </section>
-
-        <!-- create post -->
-        <button></button>
-        
-        <!-- entries section -->
-        <section id="entries-container">
-            <div id="entries"></div>
-        </section>
+            <!-- entries section -->
+            <section id="entries-container">
+                <div id="entries"></div>
+            </section>
+        </div>
 
         <!-- footer -->
         <footer>
@@ -100,6 +107,7 @@
         <!-- Linked JavaScript Files -->
         <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="js/entries.js"></script>
+        <script src="js/tags.js"></script>
 
     </body> 
 </html>

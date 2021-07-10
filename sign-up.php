@@ -19,52 +19,67 @@
         <!-- Linked Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
         <link rel="stylesheet" type="text/css" href="css/grids.css">
+        <link rel="stylesheet" type="text/css" href="css/account-access.css">
 
     </head>
 
-    <body>
-        <header>
-            <!-- navigation -->
-            <nav>
-                <a href="index.php">Home</a>
-                <a href="explore.php">Explore</a>
-                <a href="login.php">Login/Sign Up</a>
-            </nav>
-        </header>
+    <body class="main-body-grid">
+        <div class="body-wrapper">
+            <header>
+                <!-- navigation -->
+                <nav>
+                    <a href="index.php">Home</a>
+                    <a href="explore.php">Explore</a>
+                    <a href="login.php">Login/Sign Up</a>
+                </nav>
+            </header>
 
-       <!-- login container -->
-       <section>
-            <!-- first name -->
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" required>
-            <p id="first-name-validation"></p>
-            
-            <!-- last name -->
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" required>
-            <p id="last-name-validation"></p>
+            <h1 id="signup">Signup</h1>
 
-            <!-- email -->
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" required>
-            <p id="email-validation"></p>
-            <p id="email-taken"></p>
+            <!-- signup container -->
+            <section id="signup-form">
+                <div id="signup-content" class="one">
+                    <!-- first name -->
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <p id="first-name-validation"></p>
+                    
+                    <!-- last name -->
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    <p id="last-name-validation"></p>
 
-            <!-- password -->
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" onkeyup="passwordCheck()" required>
+                    <!-- email -->
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" required>
+                    <p id="email-validation"></p>
+                    <p id="email-taken"></p>
+                </div>
 
-            <!-- confirm password -->
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password" onkeyup="passwordCheck()" required>
-            <p id='password-message'></p>
+                <div id="signup-content" class="two">
+                    <!-- password -->
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" onkeyup="passwordCheck()" required>
 
-            <!-- sign up button -->
-            <button id="sign-up" class="sign-up" value="Sign Up" disabled="true">Sign Up</button>
+                    <!-- confirm password -->
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" onkeyup="passwordCheck()" required>
+                    <p id='password-message'></p>
+                </div>
 
-            <!-- log in link -->
-            <p>Don't Have an Account? <a href="login.php">Log In</a></p>
-       </section>
+                <!-- login button and redirection -->
+                <div class="cta-access">
+                    <!-- sign up button -->
+                    <div class="cta-container">
+                        <button id="sign-up" class="cta" value="Sign Up" disabled="true">Sign Up</button>
+                    </div>
+
+                    <!-- log in link -->
+                    <p>Don't Have an Account? <a href="login.php">Log In</a></p>
+                </div>
+                
+            </section>
+        </div>
 
         <!-- footer -->
         <footer>

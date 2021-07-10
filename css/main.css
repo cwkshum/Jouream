@@ -48,6 +48,7 @@ a {
 }
 
 a:hover, a:focus, a:active {
+    transition: color 0.3s;
     text-decoration: underline; 
     color: #BEA35E; 
     cursor: pointer;
@@ -64,6 +65,7 @@ img {
 
 /* call-to-action button */
 .cta {
+    font-size: 1.1rem;
     border-radius: 40px;
     border: 2px solid #887B98;
     color: #887B98; 
@@ -76,6 +78,7 @@ img {
     border: 2px solid #BEA35E;
     background-color: #BEA35E;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 /* ------------- END OF GENERAL SITE STYLING ---------------- */
@@ -164,6 +167,36 @@ footer .brand {
 label, input, form {
     display: block;
 }
+
+/* all entry inputs */
+input {
+    border: none;
+    border-bottom: solid 1px #9C9EB3;
+    background: none;
+}
+
+/* labels for inputs */
+label, .entry-label, .faux-label {
+    font-family: 'Red Hat Text', Helvetica, Arial, sans-serif;
+    color: #3F4262; 
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
+}
+
+textarea, input {
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; 
+    color: #646788;
+}
+
+/* turn off spinners for number inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 /* ---------- END OF FORMS ------------ */
 
 
@@ -226,6 +259,53 @@ label, input, form {
 
 /* ------- END OF  ENTRY CARDS --------  */
 
+
+/* --------- TAG INPUTS --------------  */
+input#tag-input {
+    display: none;
+  }
+  
+  /* tags container */
+  .tags-input-wrapper {
+    padding: 0.25rem;
+    max-width: 12rem;
+    border-bottom: 1px solid #9FA0B0;
+  }
+  
+    /* tags input/typing space */
+  .tags-input-wrapper input {
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  
+  /* tags */
+  .tags-input-wrapper .tag {
+    display: inline-block;
+    color: #646788;
+    border-radius: 5px;
+    border: 1px solid #9FA0B0;
+    padding: 0px 3px 0px 7px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  
+  /* tag exist, delete */
+  .tags-input-wrapper .tag a {
+    color: #BEA35E;
+    border-radius: 50%;
+    padding: 0 4px 0 4px;
+    margin: 0 6px 0 10px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tags-input-wrapper .tag a:hover,   .tags-input-wrapper .tag a:focus {
+    transition-property: color 1.5s; 
+    color: #9FA0B0;
+    text-decoration: none;
+  }
+  /* -------- END OF TAG INPUTS --------------  */
 
 
 

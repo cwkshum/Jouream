@@ -47,31 +47,31 @@
 }
 
 /* labels for inputs */
-.entry-label, .faux-label {
+/* .entry-label, .faux-label {
   color: #3F4262; 
   font-weight: 700;
   font-size: 1.1rem;
   margin: 0 0 0.5rem 0;
-}
+} */
 
-textarea, input {
+/* textarea, input {
   font-family: 'Nunito', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased; 
   color: #646788;
-}
+} */
 
   /* turn off spinners for number inputs */
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 
 /* Firefox */
-input[type=number] {
+/* input[type=number] {
   -moz-appearance: textfield;
-}
+} */
 
 #entry-duration input, #entry-duration p, #entry-visibility input, #entry-visibility label {
   display: inline-block;
@@ -89,10 +89,10 @@ input[type=number] {
 }
 
 /* all entry inputs */
-#entry-form input {
+/* #entry-form input {
   border: none;
   border-bottom: solid 1px #9C9EB3;
-}
+} */
 
 #entry-title input {
   /* width: 80%; */
@@ -184,6 +184,7 @@ input#tag-input {
 .tags-input-wrapper {
   padding: 0.25rem;
   max-width: 12rem;
+  border-bottom: 1px solid #9FA0B0;
 }
 
   /* tags input/typing space */
