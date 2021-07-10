@@ -131,15 +131,15 @@
                         <!-- visibility -->
                         <div id="entry-visibility">
                             <p class="faux-label">Visibility</p>
-                            <input type="radio" id="private" class="visibility" name="visibility" value="private" required>
+                            <input type="radio" id="private" class="visibility" name="visibility" value="0" required>
                             <label for="private" class="entry-label">Private</label>
-                            <input type="radio" id="public" class="visibility" name="visibility" value="public">
+                            <input type="radio" id="public" class="visibility" name="visibility" value="1">
                             <label for="public" class="entry-label">Public</label>
                         </div>
 
                         <div id="entry-actions">
                             <!-- save draft -->
-                            <button type="button" id="draft">Save Draft</button>
+                            <button type="button" id="draft" disabled="true">Save Draft</button>
                             <!-- publish draft -->
                             <button type="button" id="publish" disabled="true">Publish Entry</button>
                         </div>

@@ -13,6 +13,7 @@
       // Initialize elements
       this.arr = [];
       this.input = document.createElement('input');
+      this.input.id = 'add-tags';
       this.wrapper = document.createElement('div');
       if(arguments[0] && typeof arguments[0]  === "object") {
         this.options = Object.assign(defaults, arguments[0]);

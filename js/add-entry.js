@@ -7,7 +7,17 @@ var descriptionEntered = false;
 var tagsEntered = false;
 var visibilityEntered = false;
 
-var title, date, hours, minutes, rating, description, tags, visibility;
+// get the popoup
+var popup = document.getElementById("popup");
+
+var title = ""
+var date = ""; 
+var hours = "";
+var minutes = "";
+var rating = "";
+var description = "";
+var tags = "";
+var visibility = "";
 
 // title validation
 $("#title").blur(function(){
@@ -124,7 +134,27 @@ $("#description").blur(function(){
 });
 
 // tags input validation
+$("#add-tags").blur(function(){
 
+    tags = "";
+
+    $('.tag').each(function(){
+        if(tags == ""){
+            // https://stackoverflow.com/questions/11347779/jquery-exclude-children-from-text
+            tags += $(this).clone().find('a').remove().end().text();
+        } else{
+            tags += "," + $(this).clone().find('a').remove().end().text();
+        }
+    });
+
+    if(tags != ""){
+        tagsEntered = true;
+    } else{
+        tagsEntered = false;
+    }
+
+    enablePublish();
+});
 
 // visibility selection validation
 $('.visibility').click(function(){
@@ -139,31 +169,36 @@ $('.visibility').click(function(){
 
 // enable submit button check
 function enablePublish(){
-    // if(titleEntered && dateEntered && hoursEntered && minutesEntered && ratingEntered && descriptionEntered && tagsEntered && visibilityEntered){
-    if(titleEntered && dateEntered && hoursEntered && minutesEntered && ratingEntered && descriptionEntered && visibilityEntered){
+    if(titleEntered && dateEntered && hoursEntered && minutesEntered && ratingEntered && descriptionEntered && tagsEntered && visibilityEntered){
         document.getElementById("publish").disabled = false;
     } else{
         document.getElementById("publish").disabled = true;
+    }
+
+    if(titleEntered || dateEntered || hoursEntered || minutesEntered || ratingEntered || descriptionEntered || tagsEntered || visibilityEntered){
+        document.getElementById("draft").disabled = false;
+    } else{
+        document.getElementById("draft").disabled = true;
     }
 }
 
 // add entry to database
 $(document).on('click', '#publish', function(){
-    // var tags = $("#tag-input").val();
+
+    window.alert("publish");
 
     $.ajax({
         url: "add-entry-post.php",
         method: "POST", 
-        // data: {title: title, date: date, hours: hours, minutes: minutes, rating: rating, description, description, tags:tags, publish: 1},
-        data: {title: title, date: date, hours: hours, minutes: minutes, rating: rating, description, description, publish: 1},
+        data: {title: title, date: date, hours: hours, minutes: minutes, rating: rating, description, description, tags:tags, visibility:visibility, publish: 1},
 
         success:function(data){
             // parse the data
+            window.alert(data);
             var result = $.parseJSON(data);
 
             if(result){
-                // user logged in successfully, redirect to account page
-                // window.location.replace("account.php");
+                popup.style.display = "none";
             } 
         },
     });
@@ -171,20 +206,20 @@ $(document).on('click', '#publish', function(){
 
 // add draft entry to database
 $(document).on('click', '#draft', function(){
-    // var tags = $("#tag-input").val();
 
     $.ajax({
-        url: "save-draft-post.php",
+        url: "add-entry-post.php",
         method: "POST", 
-        data: {title: title, date: date, hours: hours, minutes: minutes, rating: rating, description, description, tags:tags},
+        data: {title: title, date: date, hours: hours, minutes: minutes, rating: rating, description, description, tags:tags, visibility:visibility, publish: 2},
 
         success:function(data){
+            window.alert(data);
+
             // parse the data
             var result = $.parseJSON(data);
 
             if(result){
-                // user logged in successfully, redirect to account page
-                // window.location.replace("account.php");
+                popup.style.display = "none";
             } 
         },
     });

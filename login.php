@@ -54,7 +54,7 @@
                         <!-- log in button -->
                         <!-- <input type="submit" name="submit" value="Log In"> -->
                         <div class="cta-container">
-                            <button class="cta" value="Log In">Log In</button>
+                            <button class="cta login" value="Log In">Log In</button>
                         </div>
     
                         <!-- sign up link -->
