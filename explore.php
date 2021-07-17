@@ -62,14 +62,14 @@
                         <!-- entry title -->
                         <div id="entry-title">
                             <label for="title" class="entry-label">Dream Title</label>
-                            <input type="text" id="title" name="title" required>
+                            <input type="text" id="title" name="title">
                             <p id="title-taken"></p>
                         </div>
 
                         <!-- entry date -->
                         <div id="entry-date">
                             <label for="date" class="entry-label">Date</label>
-                            <input type="date" id="date" name="date" min="1950-01-01" required>
+                            <input type="date" id="date" name="date" min="1950-01-01">
                         </div>
 
                         <!-- duration of sleep -->
@@ -131,7 +131,7 @@
                         <!-- visibility -->
                         <div id="entry-visibility">
                             <p class="faux-label">Visibility</p>
-                            <input type="radio" id="private" class="visibility" name="visibility" value="0" required>
+                            <input type="radio" id="private" class="visibility" name="visibility" value="0" checked="checked">
                             <label for="private" class="entry-label">Private</label>
                             <input type="radio" id="public" class="visibility" name="visibility" value="1">
                             <label for="public" class="entry-label">Public</label>

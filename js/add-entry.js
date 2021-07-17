@@ -32,6 +32,7 @@ $("#title").blur(function(){
             type: 'POST',
             data: {title: title, publish: 0},
             success: function(data){
+                
                 // parse the data sent back from the PHP 
                 var result = $.parseJSON(data);
                 var string ='';
@@ -50,10 +51,6 @@ $("#title").blur(function(){
         });
     }
 });
-
-// $(document).ready(function(){
-//     window.alert("hi");
-// });
 
 // date input validation
 $("#date").change(function(){
@@ -185,8 +182,6 @@ function enablePublish(){
 // add entry to database
 $(document).on('click', '#publish', function(){
 
-    window.alert("publish");
-
     $.ajax({
         url: "add-entry-post.php",
         method: "POST", 
@@ -194,11 +189,11 @@ $(document).on('click', '#publish', function(){
 
         success:function(data){
             // parse the data
-            window.alert(data);
             var result = $.parseJSON(data);
 
             if(result){
                 popup.style.display = "none";
+                clearEntries();
             } 
         },
     });
@@ -213,14 +208,27 @@ $(document).on('click', '#draft', function(){
         data: {title: title, date: date, hours: hours, minutes: minutes, rating: rating, description, description, tags:tags, visibility:visibility, publish: 2},
 
         success:function(data){
-            window.alert(data);
 
             // parse the data
             var result = $.parseJSON(data);
 
             if(result){
                 popup.style.display = "none";
+                clearEntries();
             } 
         },
     });
 });
+
+function clearEntries(){
+    document.getElementById('title').value = '';
+    document.getElementById('date').value = '';
+    document.getElementById('hours').value = '';
+    document.getElementById('minutes').value = '';
+    document.getElementById('description').value = '';
+    document.getElementById('add-tags').value = '';
+    // $('input[name="rating"]').attr('checked', false);
+    // $('input[name="visibility"]').attr('checked', false);
+
+
+}
