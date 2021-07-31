@@ -44,6 +44,22 @@
 
             <!-- filters section -->
             <section id="filters">
+                <!-- sort by filter -->
+                <label for="sort">Sort by:</label>
+                <select id="sort" name="sort" onchange="sortFilter()">
+                    <option value="recent">Most Recent</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+
+                <!-- <div id="entry-tags">
+                    <label for="tag-input" class="entry-label">Tags: </label>
+                    <input type="text" id="tag-input">  
+                </div> -->
+
+                <!-- search filter -->
+                <label for="search" class="entry-label">Search: </label>
+                <input type="text" id="search" name="search" onkeyup="searchFilter()">
+                
             </section>
 
             <!-- create post -->
@@ -96,10 +112,9 @@
                                 <img src="img/okay-4.svg" alt="a rating of 4 out of 5.">
                             </label>
                            
-
-                             <!-- 3/5 rating -->
-                             <input type="radio" id="3" name="rating" class="rating" value="3">
-                             <label for="3" class="entry-label">
+                            <!-- 3/5 rating -->
+                            <input type="radio" id="3" name="rating" class="rating" value="3">
+                            <label for="3" class="entry-label">
                                 <img src="img/neutral-3.svg" alt="a rating of 3 out of 5.">
                             </label>
 
@@ -131,7 +146,7 @@
                         <!-- visibility -->
                         <div id="entry-visibility">
                             <p class="faux-label">Visibility</p>
-                            <input type="radio" id="private" class="visibility" name="visibility" value="0" checked="checked">
+                            <input type="radio" id="private" class="visibility" name="visibility" value="0">
                             <label for="private" class="entry-label">Private</label>
                             <input type="radio" id="public" class="visibility" name="visibility" value="1">
                             <label for="public" class="entry-label">Public</label>
@@ -148,7 +163,9 @@
                 </div>
             </div>
 
-            <section id="posts-container">
+            <!-- entries section -->
+            <section id="entries-container">
+                <div id="entries"></div>
             </section>
         </div>
 
@@ -187,6 +204,7 @@
         <script src="js/create.js"></script>
         <script src="js/tags.js"></script>
         <script src="js/add-entry.js"></script>
+        <script src="js/explore.js"></script>
 
     </body> 
 </html>

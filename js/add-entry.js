@@ -181,7 +181,6 @@ function enablePublish(){
 
 // add entry to database
 $(document).on('click', '#publish', function(){
-
     $.ajax({
         url: "add-entry-post.php",
         method: "POST", 
@@ -192,6 +191,7 @@ $(document).on('click', '#publish', function(){
             var result = $.parseJSON(data);
 
             if(result){
+                // close and clear popup
                 popup.style.display = "none";
                 clearEntries();
             } 
@@ -201,7 +201,6 @@ $(document).on('click', '#publish', function(){
 
 // add draft entry to database
 $(document).on('click', '#draft', function(){
-
     $.ajax({
         url: "add-entry-post.php",
         method: "POST", 
@@ -213,6 +212,7 @@ $(document).on('click', '#draft', function(){
             var result = $.parseJSON(data);
 
             if(result){
+                // close and clear popup
                 popup.style.display = "none";
                 clearEntries();
             } 
@@ -220,15 +220,20 @@ $(document).on('click', '#draft', function(){
     });
 });
 
+// clear the popup fields
 function clearEntries(){
+    // remove content from text fields
     document.getElementById('title').value = '';
     document.getElementById('date').value = '';
     document.getElementById('hours').value = '';
     document.getElementById('minutes').value = '';
     document.getElementById('description').value = '';
     document.getElementById('add-tags').value = '';
-    // $('input[name="rating"]').attr('checked', false);
-    // $('input[name="visibility"]').attr('checked', false);
 
+    // unselect rating and visibility options
+    $('#entry-rating').find("input[type=radio]").prop("checked", "").end();
+    $('#entry-visibility').find("input[type=radio]").prop("checked", "").end();
 
+    // remove entered tags
+    $('.tag').remove();
 }

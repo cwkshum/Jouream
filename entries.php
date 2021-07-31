@@ -53,15 +53,16 @@
                 </select>
 
                 <!-- tag filter -->
-                <label for="tags">Tags:</label>
-                <input type="text" id="tags" name="tags">
+                <!-- <label for="tags">Tags:</label>
+                <input type="text" id="tags" name="tags"> -->
 
                 <div id="entry-tags">
-                    <label for="tag-input" class="entry-label">Tags</label>
+                    <label for="tag-input" class="entry-label">Tags: </label>
                     <input type="text" id="tag-input">  
                 </div>
 
                 <!-- search filter -->
+                <label for="search" class="entry-label">Search: </label>
                 <input type="text" id="search" name="search" onkeyup="searchFilter()">
                 
             </section>
@@ -106,8 +107,8 @@
 
         <!-- Linked JavaScript Files -->
         <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="js/entries.js"></script>
         <script src="js/tags.js"></script>
+        <script src="js/entries.js"></script>
 
     </body> 
 </html>
