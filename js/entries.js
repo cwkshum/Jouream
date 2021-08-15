@@ -45,11 +45,11 @@ function displayEntries(){
                     // Entry Tags
                     var tagArr = value['tags'].split(',');
                     for(let i = 0; i < tagArr.length; i++){
-                        string += '<a href="" class="entry-card-link">#' + tagArr[i] + ' </a>';
+                        string += '<p class="entry-card-link tags">#' + tagArr[i] + ' </p>';
                     }
 
                     // Entry Link
-                    string += '</a><hr class="entry-card-line"><div class="cont-reading"><a href="" class="entry-card-link"></a>';
+                    string += '</a><hr class="entry-card-line"><div class="cont-reading"><a href="" class="entry-card-link">';
 
                     // Continue Reading
                     string += 'continue reading <img src="img/right-arrow.svg" alt="right arrow icon"></a></div>';
@@ -57,7 +57,6 @@ function displayEntries(){
                 string += '</div>';
 
             });
-
 
             // Show the results on the page
             $("#entries").html(string);
@@ -69,27 +68,42 @@ function displayEntries(){
 // search filter
 function searchFilter(){
     search = $("#search").val();
+    tags = "";
     displayEntries();
 }
 
 // sort filter
 function sortFilter(){
     sort = $("#sort").val();
+    tags = "";
     displayEntries();
 }
 
 // tags filter
-$("#add-tags").blur(function(){
-    tags = "";
-    $('.tag').each(function(){
-        if(tags == ""){
-            // https://stackoverflow.com/questions/11347779/jquery-exclude-children-from-text
-            tags += $(this).clone().find('a').remove().end().text();
-        } else{
-            tags += "," + $(this).clone().find('a').remove().end().text();
-        }
-    });
+// $("#add-tags").blur(function(){
+//     tags = "";
+//     $('.tag').each(function(){
+//         if(tags == ""){
+//             // https://stackoverflow.com/questions/11347779/jquery-exclude-children-from-text
+//             tags += $(this).clone().find('a').remove().end().text();
+//         } else{
+//             tags += "," + $(this).clone().find('a').remove().end().text();
+//         }
+//     });
 
+//     displayEntries();
+// });
+
+// tags selected from an entry
+$(document).on('click', '.tags', function(){
+    tags = $(this).text().replace('#', '');
+    tags = tags.replace(' ', '');
+    $('#search').val(tags);
     displayEntries();
 });
 
+$(document).on('click', '.cont-reading', function(){
+    $_SESSION['entryTitle'] = $('.entry-card-title').text();
+    window.alert($_SESSION['entryTitle']);
+
+});

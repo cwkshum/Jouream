@@ -1,7 +1,6 @@
 <?php
     // connect to db
     require("database.php");
-    require("session-not-active-check.php");
 
     $whereSearchQuery = "";
     $whereTagsQuery = "";
@@ -13,7 +12,7 @@
 
     // filter entries by search
     if(!empty($search)){
-        $whereSearchQuery .= " AND title LIKE '%$search%' OR tags LIKE '%$search%' OR content LIKE '%$search%'";
+        $whereSearchQuery .= " AND (title LIKE '%$search%' OR tags LIKE '%$search%' OR content LIKE '%$search%')";
         $query .= $whereSearchQuery;
     }
 

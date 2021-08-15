@@ -46,7 +46,7 @@ function displayEntries(){
                     // Entry Tags
                     var tagArr = value['tags'].split(',');
                     for(let i = 0; i < tagArr.length; i++){
-                        string += '<a href="" class="entry-card-link">#' + tagArr[i] + ' </a>';
+                        string += '<p class="entry-card-link">#' + tagArr[i] + ' </p>';
                     }
 
                     // Entry Link
@@ -59,7 +59,6 @@ function displayEntries(){
 
             });
 
-
             // Show the results on the page
             $("#entries").html(string);
 
@@ -70,26 +69,36 @@ function displayEntries(){
 // search filter
 function searchFilter(){
     search = $("#search").val();
+    tags = "";
     displayEntries();
 }
 
 // sort filter
 function sortFilter(){
     sort = $("#sort").val();
+    tags = "";
     displayEntries();
 }
 
 // tags filter
-$("#add-tags").blur(function(){
-    tags = "";
-    $('.tag').each(function(){
-        if(tags == ""){
-            // https://stackoverflow.com/questions/11347779/jquery-exclude-children-from-text
-            tags += $(this).clone().find('a').remove().end().text();
-        } else{
-            tags += "," + $(this).clone().find('a').remove().end().text();
-        }
-    });
+// $("#add-tags").blur(function(){
+//     tags = "";
+//     $('.tag').each(function(){
+//         if(tags == ""){
+//             // https://stackoverflow.com/questions/11347779/jquery-exclude-children-from-text
+//             tags += $(this).clone().find('a').remove().end().text();
+//         } else{
+//             tags += "," + $(this).clone().find('a').remove().end().text();
+//         }
+//     });
 
+//     displayEntries();
+// });
+
+// tags selected from an entry
+$(document).on('click', '.entry-card-link', function(){
+    tags = $(this).text().replace('#', '');
+    tags = tags.replace(' ', '');
+    $('#search').val(tags);
     displayEntries();
 });

@@ -12,13 +12,20 @@
   
       // Initialize elements
       this.arr = [];
-      this.input = document.createElement('input');
-      this.input.id = 'add-tags';
+      // this.input = document.createElement('input');
+      // this.input.id = 'add-tags';
+      // this.input.id = this.options.selector;
+
       this.wrapper = document.createElement('div');
       if(arguments[0] && typeof arguments[0]  === "object") {
         this.options = Object.assign(defaults, arguments[0]);
       }
       this.original_input = document.getElementById(this.options.selector);
+      // window.alert(this.options.selector);
+
+      this.input = document.createElement('input');
+      // this.input.id = this.options.selector + '-input';
+      this.input.id = 'add-tags';
       
       buildUI.call(this);
       addEvents.call(this);
@@ -117,6 +124,12 @@
   }())
   
   
+  // var tagInput1 = new tagsInput({
+  //   selector: 'tag-search',
+  //   duplicate : false,
+  //   max : 10
+  // });
+
   var tagInput1 = new tagsInput({
     selector: 'tag-input',
     duplicate : false,

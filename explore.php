@@ -51,9 +51,9 @@
                     <option value="oldest">Oldest</option>
                 </select>
 
-                <!-- <div id="entry-tags">
-                    <label for="tag-input" class="entry-label">Tags: </label>
-                    <input type="text" id="tag-input">  
+                <!-- <div id="tags-filter">
+                    <label for="tag-search" class="entry-label">Tags: </label>
+                    <input type="text" id="tag-search">
                 </div> -->
 
                 <!-- search filter -->
@@ -63,7 +63,12 @@
             </section>
 
             <!-- create post -->
-            <button id="create-post">+</button>
+            <?php
+                if(isset($_SESSION["email"])) {
+                    // display logged in navigation
+                    echo '<button id="create-post">+</button>';
+                } 
+            ?>
 
             <!-- create post popup -->
             <div id="popup" class="popup-container">
@@ -140,7 +145,7 @@
                         <!-- tags -->
                         <div id="entry-tags">
                             <label for="tag-input" class="entry-label">Tags</label>
-                            <input type="text" id="tag-input">  
+                            <input type="text" id="tag-input">
                         </div>
 
                         <!-- visibility -->
