@@ -90,6 +90,7 @@ img {
 nav a { 
     display: inline-block;
     padding: 2rem 1.5rem 0.7rem 1.5rem;
+    color: #9C9EB3;
 }
 
 nav {
@@ -268,8 +269,7 @@ input#tag-input {
   /* tags container */
   .tags-input-wrapper {
     padding: 0.25rem;
-    max-width: 12rem;
-    border-bottom: 1px solid #9FA0B0;
+    width: 20rem;
   }
   
     /* tags input/typing space */
@@ -277,6 +277,7 @@ input#tag-input {
     border: none;
     background: transparent;
     outline: none;
+    border-bottom: 1px solid #9FA0B0;
   }
   
   /* tags */

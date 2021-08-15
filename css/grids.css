@@ -186,6 +186,22 @@ h1#login, h1#signup {
 
 /* ------- END OF LOGIN / SIGNUP PAGE GRIDS --------------- */
 
+/* -------------- STYLE GUIDE GRID --------------- */
+#style-guide-h1 {
+    grid-row: 2 / 4;
+    grid-column: 1 / 8;
+}
+#target-nav {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+}
+
+.element-wrapper {
+    grid-column: 3 / 12;
+}
+
+/* ------------END OF STYLE GUIDE GRID --------------- */
+
 
 
 

@@ -16,11 +16,12 @@
         <title>Entries | Jouream</title>
 
         <!-- google font link -->
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;700&family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;700&family=Red+Hat+Text:wght@400;700&display=swap" rel="stylesheet">
         
         <!-- Linked Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
         <link rel="stylesheet" type="text/css" href="css/grids.css">
+        <link rel="stylesheet" type="text/css" href="css/entries.css">
 
     </head>
 
@@ -53,11 +54,8 @@
                 </select>
 
                 <!-- tag filter -->
-                <label for="tags">Tags:</label>
-                <input type="text" id="tags" name="tags">
-
-                <div id="entry-tags">
-                    <label for="tag-input" class="entry-label">Tags</label>
+                <div id="tags">
+                    <label for="tag-input">Tags:</label>
                     <input type="text" id="tag-input">  
                 </div>
 

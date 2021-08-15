@@ -1,0 +1,9 @@
+#tags label, #filters label {
+    color: #9C9EB3; 
+    font-weight: 400;
+    display: inline-block;
+}
+
+.tags-input-wrapper {
+    display: inline-block;
+}
