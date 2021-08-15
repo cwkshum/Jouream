@@ -96,7 +96,7 @@
             <!-- resources -->
             <div class="resources">
                 <h3>Resources</h3>
-                <a href="style-guide.html">Style Guide</a>
+                <a href="style-guide.php">Style Guide</a>
                 <a href="citations.html">Citations</a>
             </div>
         </footer>

@@ -16,7 +16,7 @@
         <title>Entries | Jouream</title>
 
         <!-- google font link -->
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;700&family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;700&family=Red+Hat+Text:wght@400;700&display=swap" rel="stylesheet">
         
         <!-- Linked Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
