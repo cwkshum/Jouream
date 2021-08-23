@@ -40,7 +40,7 @@ function displayEntries(){
                     string += '<p class="entry-card-date">' + monthNames[date[1]-1] + ' ' +  date[2] + ', ' + date[0] + '</p>';
 
                     // Entry Content
-                    string += '<p>' + value['content'] + '</p>';
+                    string += '<p>' + value['content'].substr(0, 50) + '</p>';
 
                     // Entry Tags
                     var tagArr = value['tags'].split(',');
@@ -49,10 +49,10 @@ function displayEntries(){
                     }
 
                     // Entry Link
-                    string += '</a><hr class="entry-card-line"><div class="cont-reading"><a href="" class="entry-card-link">';
+                    string += '</a><hr class="entry-card-line"><div class="cont-reading"><p id="' + value['entry_id'] + '" class="entry-card-link" onclick="contReading(this.id)">';
 
                     // Continue Reading
-                    string += 'continue reading <img src="img/right-arrow.svg" alt="right arrow icon"></a></div>';
+                    string += 'continue reading <img src="img/right-arrow.svg" alt="right arrow icon"></p></div>';
 
                 string += '</div>';
 
@@ -90,7 +90,6 @@ function sortFilter(){
 //             tags += "," + $(this).clone().find('a').remove().end().text();
 //         }
 //     });
-
 //     displayEntries();
 // });
 
@@ -102,8 +101,28 @@ $(document).on('click', '.tags', function(){
     displayEntries();
 });
 
-$(document).on('click', '.cont-reading', function(){
-    $_SESSION['entryTitle'] = $('.entry-card-title').text();
-    window.alert($_SESSION['entryTitle']);
+// $(document).on('click', '.cont-reading', function(){
+function contReading(id){
+    // $_SESSION['entryTitle'] = $('.entry-card-title').text();
+    // $_SESSION['entryId'] = $(this).attr('id');
+    // window.alert($_SESSION['entryTitle'] + " " + $_SESSION['entryId']);
 
-});
+    // var entry_title = $('.entry-card-title').text();
+    var entry_id = id;
+
+    $.ajax({
+        url:"save-entry-info.php",
+        method:"POST",
+        data:{entry_id:entry_id},
+
+        success:function(data){
+            // parse the result
+            var result = $.parseJSON(data);
+
+            if(result == 1){
+                window.location.replace("entry.php");
+            }
+
+        }
+    })
+}

@@ -41,7 +41,7 @@ function displayEntries(){
                     string += '<p class="entry-card-date">' + monthNames[date[1]-1] + ' ' +  date[2] + ', ' + date[0] + '</p>';
 
                     // Entry Content
-                    string += '<p>' + value['content'] + '</p>';
+                    string += '<p>' + value['content'].substr(0, 50) + '</p>';
 
                     // Entry Tags
                     var tagArr = value['tags'].split(',');
