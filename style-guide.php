@@ -46,7 +46,137 @@
                  <a href="#">Typography</a>
              </nav>
 
+            <!-- UI Elements column -->
              <div class="element-wrapper">
+
+                <!-- CTA BUTTON -->
+                <div class="element-container" id="cta-button">
+                    <h2>Call-To-Action Button</h2>
+                   
+                    <!-- cta example -->
+                    <div class="two-col">
+                        <!-- enabled button exam -->
+                        <div class="col-1"> 
+                            <h3>Enabled</h3>
+                            <button class="cta">Button</button>
+                        </div>
+
+                        <!-- disabled button exam -->
+                        <div class="col-2">
+                            <h3>Disabled</h3>
+                            <button type="button" class="cta" disabled>Button</button>
+                        </div>
+                    </div>
+                    
+                    <!-- element notes -->
+                    <div class="comments">
+                        <h3>Note</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam.</p>
+                    </div>
+                    
+                    <!-- code snippet -->
+                    <div class="comments">
+                        <h3>Code Snippet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam.</p>
+                    </div>
+                </div>
+
+                <!-- Color Palette -->
+                <div class="element-container" id="color-palette">
+                    <h2>Color Palette</h2>
+                   
+                    <!-- color -->
+                    <div class="two-col">
+                    <!-- FIRST COLUMN -->
+
+                        <!-- purple milk -->
+                        <div class="col-1" id="purple-milk"> 
+                            <div class="swatch-container">
+                                <div class="swatch purple-milk"></div>
+                                <div class="color-tag">
+                                    <p>#EDEDF1</p>
+                                    <p>rgb(237, 237, 241)</p>
+                                    <p class="color-use">accents</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- dusty lavender -->
+                        <div class="col-1" id="dusty-lavender"> 
+                            <div class="swatch-container">
+                                <div class="swatch dusty-lavender"></div>
+                                <div class="color-tag">
+                                    <p>#9C9EB3</p>
+                                    <p>rgb(156, 158, 179)</p>
+                                    <p class="color-use">interactives</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- plum purple -->
+                        <div class="col-1" id="plum-purple"> 
+                            <div class="swatch-container">
+                                <div class="swatch plum-purple"></div>
+                                <div class="color-tag">
+                                    <p>#646788</p>
+                                    <p>rgb(136, 123, 152)</p>
+                                    <p class="color-use">h1 headings</p>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    
+                    <!-- SECOND COLUMN -->
+                        <!-- golden yellow -->
+                        <div class="col-2" id="golden-yellow"> 
+                            <div class="swatch-container">
+                                <div class="swatch golden-yellow"></div>
+                                <div class="color-tag">
+                                    <p>#BEA35E</p>
+                                    <p>rgb(190, 163, 94)</p>
+                                    <p class="color-use">interactive hover states</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- navy blue -->
+                        <div class="col-2" id="navy-blue"> 
+                            <div class="swatch-container">
+                                <div class="swatch navy-blue"></div>
+                                <div class="color-tag">
+                                    <p>#3F4262</p>
+                                    <p>rgb(63, 66, 98)</p>
+                                    <p class="color-use">headings</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- navy blue -->
+                        <div class="col-2" id="past-dusk-blue"> 
+                            <div class="swatch-container">
+                                <div class="swatch past-dusk-blue"></div>
+                                <div class="color-tag">
+                                    <p>#646788</p>
+                                    <p>rgb(100, 103, 136)</p>
+                                    <p class="color-use">body copy</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- element notes -->
+                    <div class="comments">
+                        <h3>Note</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam.</p>
+                    </div>
+                    
+                    <!-- code snippet -->
+                    <div class="comments">
+                        <h3>Code Snippet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam.</p>
+                    </div>
+                </div>
 
              </div>
 

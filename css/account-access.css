@@ -1,5 +1,5 @@
 /* login/signup container */
-#login-form, #signup-form {
+/* #login-form, #signup-form {
     background-color: rgba(255, 255, 255, 0.8); 
     margin-bottom: 2rem;
     border-radius: 5px;
@@ -7,11 +7,11 @@
 
 h1 {
     text-align: center;
-}
+} */
 
 /* ------- CTA SECTION -------- */
 /* submit buttons */
-.cta {
+/* .cta {
     border: none; 
     background-color: #9C9EB3; 
     color: #FFFFFF;
@@ -24,26 +24,26 @@ h1 {
 }
 
 /* container for submit button and text */
-.cta-access { 
+/* .cta-access { 
     display: flex; 
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 2rem 0 5rem 0;
-}
+}  */
 
 /* login/signup referral  */
-.cta-access p {
+/* .cta-access p {
     margin-top: 1.25rem;
 }
 
 .cta-container {
     margin-top: 2rem;
-}
+} */
 /* ----- END OF CTA SECTION ------- */
 
 /* ----- FORM CONTENT -------- */
-#login-content input, #signup-content input {
+/* #login-content input, #signup-content input {
     width: 100%;
 }
 
@@ -53,6 +53,6 @@ h1 {
 
 #login-content label:first-of-type, #signup-content label:first-of-type{
     margin-top: 5rem;
-}
+} */
 /* ----- END OF FORM CONTENT -------- */
 

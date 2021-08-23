@@ -1,5 +1,5 @@
 /* -------- HERO ----------- */
-#main {
+/* #main {
     height: 100vh;
 }
 
@@ -14,12 +14,12 @@ h1 {
 
 #main cta {
     margin-top: 3rem;
-}
+} */
 /* -------- END OF HERO ----------- */
 
 
 /* ------------- ABOUT -------------- */
-#about {
+/* #about {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +27,7 @@ h1 {
     text-align: center; 
 
     margin: 1rem 0 18rem 0;
-}
+} */
 /* --------- END OF ABOUT -------------- */
 
 

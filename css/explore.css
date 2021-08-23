@@ -1,36 +1,39 @@
-#header {
+/* #header {
     text-align: center;
-}
+} */
 
 /* -------- CREATE POST POPUP --------- */
 /* container for popup */
-.popup-container {
-  display: none; /* hide the container by default */
-  position: fixed; 
+/* .popup-container {
+  display: none;  */
+  /* hide the container by default */
+  /* position: fixed; 
   z-index: 1; 
-  padding: 5rem 0 5rem 0; /* Location of the box */
+  padding: 5rem 0 5rem 0;  */
+  /* Location of the box */
   
-  left: 0;
+  /* left: 0;
   top: 0;
   width: 100%; 
   height: 100%;
   overflow: auto; 
-  background-color: rgb(0,0,0); /* fallback color */
-  background-color: rgba(0,0,0,0.4);
-}
+  background-color: rgb(0,0,0);  */
+  /* fallback color */
+  /* background-color: rgba(0,0,0,0.4);
+} */
   
 /* popup content */
-.popup-content {
+/* .popup-content {
   background-color: #FFFFFF;
   color: #3F4262;
   border-radius: 5px;
   margin: auto;
   width: 65%;
   padding: 0 0 4rem 0;
-}
+} */
 
 /* The Close Button */
-.close {
+/* .close {
   margin: 1rem 2rem 0 0;
   color: #9C9EB3;
   float: right;
@@ -44,7 +47,7 @@
   color: #BEA35E;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
 /* labels for inputs */
 /* .entry-label, .faux-label {
@@ -73,20 +76,20 @@ input::-webkit-inner-spin-button {
   -moz-appearance: textfield;
 } */
 
-#entry-duration input, #entry-duration p, #entry-visibility input, #entry-visibility label {
+/* #entry-duration input, #entry-duration p, #entry-visibility input, #entry-visibility label {
   display: inline-block;
   margin: 0;
-}
+} */
 
 /* number inputs for duration of sleep */
-#entry-duration input {
+/* #entry-duration input {
   width: 1.5rem;
-}
+} */
 
 /* input for date */
-#entry-date input {
+/* #entry-date input {
   margin-top: 0.7rem;
-}
+} */
 
 /* all entry inputs */
 /* #entry-form input {
@@ -94,11 +97,11 @@ input::-webkit-inner-spin-button {
   border-bottom: solid 1px #9C9EB3;
 } */
 
-#entry-title input {
-  /* width: 80%; */
-}
+/* #entry-title input {
+  width: 80%;
+} */
 
-#entry-description textarea{
+/* #entry-description textarea{
   width: 100%;
   min-height: 15rem;
   resize: none;
@@ -108,18 +111,18 @@ input::-webkit-inner-spin-button {
 
 #entry-duration input:nth-of-type(2n), #entry-visibility input:nth-of-type(2n) {
   margin-left: 1rem;
-} 
+}  */
 
 /* submit buttons */
-#entry-actions button {
+/* #entry-actions button {
   padding: 0.75rem 1rem; 
   border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
-}
+} */
 
 /* publish entry button */
-#publish {
+/* #publish {
   background: #9C9EB3;
   color: white;
   border: solid 2px #9C9EB3;
@@ -129,10 +132,10 @@ input::-webkit-inner-spin-button {
   transition: background 0.2s, border 0.2s; 
   background: #BEA35E;
   border: solid 2px #BEA35E;
-}
+} */
 
 /* draft button */
-#draft {
+/* #draft {
   background: #FFFFFF; 
   border: solid 2px #9C9EB3;
   color: #9C9EB3;
@@ -144,11 +147,11 @@ input::-webkit-inner-spin-button {
   border: solid 2px #BEA35E;
   color: #FFFFFF;
   
-}
+} */
 
 
 /* ------- RATING FACES ------------ */
-#entry-rating img {
+/* #entry-rating img {
   width: 3rem;
   height: 3rem;
   margin-right: 0.25rem;
@@ -169,15 +172,15 @@ input[type=radio]:checked + label > img {
 
 #entry-rating input[type=radio] {
   display: none;
-}
+} */
 /* ------- END OF RATING FACES ------------ */
 
 /* ----- TAGS ------- */
  /* tags container */
- .tags-input-wrapper {
+ /* .tags-input-wrapper {
   max-width: 12rem;
   border-bottom: 1px solid #9FA0B0;
-}
+} */
 
 /* ----- END OF  TAGS ------- */
 

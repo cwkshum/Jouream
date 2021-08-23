@@ -16,8 +16,16 @@ h1, h2, h3, h4 {
 
 h1 {
     /* 48px */
-    font-size: 3rem;
-    color: #887B98;
+    /* font-size: 3rem;
+    color: #887B98; */
+}
+
+h1 {
+    /* 48px */
+    font-size: 6.25rem;
+    color: #CBC5D2;
+    text-align: center;
+    margin: 4.5rem 0 4.5rem 0;
 }
 
 h2 {
@@ -67,18 +75,34 @@ img {
 .cta {
     font-size: 1.1rem;
     border-radius: 40px;
-    border: 2px solid #887B98;
-    color: #887B98; 
-    padding: 1rem
+    background: #999AB0;
+    color: #FFFFFF;
+    padding: 0.8rem 1.75rem 0.8rem 1.75rem;
+    border-style: none;
 }
 
 .cta:hover, .cta:focus, .cta:active {
     text-decoration: none;
     color: #FFFFFF; 
-    border: 2px solid #BEA35E;
     background-color: #BEA35E;
     transition: background-color 0.3s;
     cursor: pointer;
+}
+
+button:disabled {
+    background-color: #888888;
+}
+
+button:disabled:hover,button:disabled:focus, button:disabled:active {
+    background-color: #888888;
+    cursor: default;
+}
+
+/* button  */
+button {
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin: 0;
 }
 
 /* ------------- END OF GENERAL SITE STYLING ---------------- */
@@ -119,7 +143,7 @@ nav {
 /* --------------- FOOTER --------------- */
 footer {
     border-top: solid 0.01rem #BCBDCB;
-    padding: 3rem 0 3rem 0;
+    padding: 3rem 7em 3rem 7rem;
 }
 
 footer p, footer a, footer h2, footer h3 {
@@ -136,13 +160,14 @@ footer h3 {
 
 /* brand/logo */
 .brand {
-    font-family: 'Caveat', Helvetica, Arial, sans-serif;
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+    font-weight: 700;
 }
 
 /* brand/logo in footer */
 footer .brand {
-    margin: 0;
-    font-size: 2rem;
+    margin: 1.28rem 0 1.2rem 0;
+    font-size: 1.1rem;
 }
 
 /* slogo */
