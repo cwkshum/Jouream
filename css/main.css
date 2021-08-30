@@ -253,14 +253,54 @@ input::-webkit-inner-spin-button {
 }
 
 /* entry tags */
-.entry-card-link {
+.entry-card-tag {
     color: #9C9EB3;
+    font-weight: 700;
 }
 
 /* separator */
 .entry-card-line {
     margin: 2rem 0 1.5rem 0;
-    border: solid 0.05rem #646788; 
+    border: none;
+    border-top: solid 1rem #646788; 
+    display: inline-block;
+}
+
+/* moon cloud icon */
+.entry-card-divider img {
+    height: 3rem;
+    width: auto;
+    z-index: 5;
+}
+
+/* entry card divider */
+.entry-card-divider {
+    position: relative;
+    text-align: center;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+/* entry divider lines */
+.entry-card-divider:before, 
+.entry-card-divider:after {
+    content: '';
+    display: inline-block;
+    border: none;
+    border-top: 0.12rem solid #646788;
+    width: 40%;
+    position: absolute;
+    z-index: 0;
+    top: 30%;
+}
+
+.entry-card-divider:before {
+    margin-left: 0;
+    left: 0;
+}
+  
+.entry-card-divider:after {
+    margin-right: 0; 
+    right: 0;
 }
 
 /* continue reading link */
@@ -282,7 +322,6 @@ input::-webkit-inner-spin-button {
     justify-content: center;
     align-items: center;
 }
-
 /* ------- END OF  ENTRY CARDS --------  */
 
 

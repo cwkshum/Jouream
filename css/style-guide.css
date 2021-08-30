@@ -13,7 +13,7 @@ h3 {
     text-align: left;
     align-items: flex-start;
 
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.8);
     /* padding: 2rem 3rem 4rem 3rem; */
     padding: 2rem 20% 3rem 20%;
     border-radius: 5px;
@@ -39,7 +39,8 @@ nav#target-nav {
 }
 
 .element-container {
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
+    background: rgba(255, 255, 255, 0.8);
     padding: 2rem 5rem 4rem 5rem;
     border-radius: 5px; 
 }
@@ -112,3 +113,45 @@ nav#target-nav {
 }
 
 /* ---END OF COLOR PALETTE--- */
+
+/* ---- ENTRY CARD EXAMPLE ----  */
+.entry-card {
+    margin-top: 2.25rem; 
+}
+/* --- END OF ENTRY CARD --- */
+
+/* ---- FORM EXAMPLES ---- */
+label {
+    margin-top: 2rem;
+}
+
+/* ---- RATINGS ---- */
+/* hide radio input */
+[type=radio] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio] + svg {
+    cursor: pointer;
+}
+
+.stroke {
+    stroke:#646788;
+    stroke-width: 3;
+}
+
+[type=radio]:checked + svg > circle, 
+[type=radio]:checked + svg > path,
+[type=radio]:checked + svg > line {
+    /* fill: #BEA35E; */
+    stroke: #BEA35E;
+    /* background: red; */
+}
+
+
+
+/* --- END OF RATINGS --- */
+
+/* --- END OF FORM EXAMPLES --- */

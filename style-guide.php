@@ -81,7 +81,7 @@
                     </div>
                 </div>
 
-                <!-- Color Palette -->
+                <!-- COLOR PALETTE -->
                 <div class="element-container" id="color-palette">
                     <h2>Color Palette</h2>
                    
@@ -163,6 +163,90 @@
                             </div>
                         </div>
 
+                    </div>
+                    
+                    <!-- element notes -->
+                    <div class="comments">
+                        <h3>Note</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam.</p>
+                    </div>
+                    
+                    <!-- code snippet -->
+                    <div class="comments">
+                        <h3>Code Snippet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam.</p>
+                    </div>
+                </div>
+
+                <!-- ENTRY CARD -->
+                <div class="element-container" id="entry-card">
+                    <h2>Entry Card</h2>
+                   
+                    <!-- entry card example -->
+                    <div class="entry-card">
+                        <h4 class="entry-card-title">Entry Title</h4>
+                        <p class="entry-card-date">May 18, 2021</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est.</p>
+                        <p class="entry-card-tag">#teeth #supernatural</p>
+
+                        <!-- divider -->
+                        <div class="entry-card-divider">
+                            <img src="img/cloud-moon.svg" >
+                        </div>
+
+                        <!-- continue reading link -->
+                        <div class="cont-reading">
+                        <a>continue reading ›</a>
+                        </div>  
+                    </div>
+                    
+                    <!-- element notes -->
+                    <div class="comments">
+                        <h3>Note</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam.</p>
+                    </div>
+                    
+                    <!-- code snippet -->
+                    <div class="comments">
+                        <h3>Code Snippet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est justo. Morbi auctor quam.</p>
+                    </div>
+                </div>
+
+                <!-- FORMS -->
+                <div class="element-container" id="forms">
+                    <h2>Entry Card</h2>
+                    
+                    <!-- form examples -->
+                    <div class="two-col">
+                        <!-- first column -->
+                        <div class="col-1"> 
+
+                            <!-- text input and labels -->
+                            <h3>Text Input & Label</h3>
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="First Name">
+
+                            <!-- emotion ratings -->
+                            <div id="ratings">
+                                <label>
+                                    <input type="radio" name="terrible" value="1">
+                                    <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="stroke" cx="25.0657" cy="25.5" r="23.4348"/>
+                                    <circle cx="16.4305" cy="24.4525" r="2.82018" fill="#646788"/>
+                                    <circle cx="34.3768" cy="24.4525" r="2.82018" fill="#646788"/>
+                                    <path d="M25.4024 28.8696C31.7329 28.8696 32.4785 34.2609 32.4785 34.2609L18.3263 34.2609C18.3263 34.2609 19.0719 28.8696 25.4024 28.8696Z" stroke="#646788" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="17.5285" y1="17.3288" x2="18.3335" y2="16.8641" stroke="#646788" stroke-width="3" stroke-linecap="round"/>
+                                    <line x1="32.5061" y1="16.864" x2="33.3111" y2="17.3288" stroke="#646788" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </label>
+                            </div>
+                            
+                        </div>  
+
+                        <div class="col-2"> 
+                            <h3>Rating Input</h3>
+                        </div> 
                     </div>
                     
                     <!-- element notes -->
