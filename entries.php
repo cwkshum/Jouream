@@ -53,12 +53,6 @@
                     <option value="oldest">Oldest</option>
                 </select>
 
-                <!-- tag filter -->
-                <!-- <div id="entry-tags">
-                    <label for="tag-input" class="entry-label">Tags: </label>
-                    <input type="text" id="tag-input">  
-                </div> -->
-
                 <!-- search filter -->
                 <label for="search" class="entry-label">Search: </label>
                 <input type="text" id="search" name="search" onkeyup="searchFilter()">
@@ -202,7 +196,7 @@
 
         <!-- Linked JavaScript Files -->
         <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="js/create.js"></script>
+        <!-- <script src="js/create.js"></script> -->
         <script src="js/tags.js"></script>
         <script src="js/add-entry.js"></script>
         <script src="js/entries.js"></script>

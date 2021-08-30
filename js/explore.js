@@ -41,19 +41,30 @@ function displayEntries(){
                     string += '<p class="entry-card-date">' + monthNames[date[1]-1] + ' ' +  date[2] + ', ' + date[0] + '</p>';
 
                     // Entry Content
-                    string += '<p>' + value['content'].substr(0, 50) + '</p>';
+                    string += '<p>' + value['content'].substr(0, 50);
+                    if(value['content'].length > 50){
+                        string += '...';
+                    } 
+                    string += '</p>';
 
                     // Entry Tags
                     var tagArr = value['tags'].split(',');
-                    for(let i = 0; i < tagArr.length; i++){
-                        string += '<p class="entry-card-link">#' + tagArr[i] + ' </p>';
+                    if(tagArr.length > 2){
+                        for(let i = 0; i < 2; i++){
+                            string += '<p class="entry-card-link tags">#' + tagArr[i] + ' </p>';
+                        }
+                        string += '<p class="entry-card-link">#...</p>';
+                    } else{
+                        for(let i = 0; i < tagArr.length; i++){
+                            string += '<p class="entry-card-link tags">#' + tagArr[i] + ' </p>';
+                        }
                     }
 
                     // Entry Link
-                    string += '</a><hr class="entry-card-line"><div class="cont-reading"><a href="" class="entry-card-link"></a>';
+                    string += '</a><hr class="entry-card-line"><div class="cont-reading"><p id="' + value['entry_id'] + '" class="entry-card-link" onclick="contReading(this.id)">';
 
                     // Continue Reading
-                    string += 'continue reading <img src="img/right-arrow.svg" alt="right arrow icon"></a></div>';
+                    string += 'continue reading <img src="img/right-arrow.svg" alt="right arrow icon"></p></div>';
 
                 string += '</div>';
 
@@ -102,3 +113,23 @@ $(document).on('click', '.entry-card-link', function(){
     $('#search').val(tags);
     displayEntries();
 });
+
+function contReading(id){
+    var entry_id = id;
+
+    $.ajax({
+        url:"save-entry-info.php",
+        method:"POST",
+        data:{entry_id:entry_id,fromEntries:false},
+
+        success:function(data){
+            // parse the result
+            var result = $.parseJSON(data);
+
+            if(result == 1){
+                window.location.replace("entry.php");
+            }
+
+        }
+    })
+}

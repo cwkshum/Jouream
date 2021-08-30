@@ -25,11 +25,11 @@ function displayEntries(){
             // display entries
             $.each(result, function(key, value){
 
-                // Remove spaces in the product name
-                // var stripped = value['name'].trim(); 
-                // stripped = stripped.replace(/\s+/g, '');
-
                 string += '<div class="entry-card">';
+                    string += '<p id="' + value['entry_id'] + '" onclick="deleteEntry(this.id)">delete</p>';
+                    string += '<p>edit</p>';
+                    // string += '<p>make public</p>';
+
                     // Entry Title
                     string += '<h3 class="entry-card-title">' + value['title'] + '</h3>';
 
@@ -40,12 +40,23 @@ function displayEntries(){
                     string += '<p class="entry-card-date">' + monthNames[date[1]-1] + ' ' +  date[2] + ', ' + date[0] + '</p>';
 
                     // Entry Content
-                    string += '<p>' + value['content'].substr(0, 50) + '</p>';
+                    string += '<p>' + value['content'].substr(0, 50);
+                    if(value['content'].length > 50){
+                        string += '...';
+                    } 
+                    string += '</p>';
 
                     // Entry Tags
                     var tagArr = value['tags'].split(',');
-                    for(let i = 0; i < tagArr.length; i++){
-                        string += '<p class="entry-card-link tags">#' + tagArr[i] + ' </p>';
+                    if(tagArr.length > 2){
+                        for(let i = 0; i < 2; i++){
+                            string += '<p class="entry-card-link tags">#' + tagArr[i] + ' </p>';
+                        }
+                        string += '<p class="entry-card-link">#...</p>';
+                    } else{
+                        for(let i = 0; i < tagArr.length; i++){
+                            string += '<p class="entry-card-link tags">#' + tagArr[i] + ' </p>';
+                        }
                     }
 
                     // Entry Link
@@ -79,20 +90,6 @@ function sortFilter(){
     displayEntries();
 }
 
-// tags filter
-// $("#add-tags").blur(function(){
-//     tags = "";
-//     $('.tag').each(function(){
-//         if(tags == ""){
-//             // https://stackoverflow.com/questions/11347779/jquery-exclude-children-from-text
-//             tags += $(this).clone().find('a').remove().end().text();
-//         } else{
-//             tags += "," + $(this).clone().find('a').remove().end().text();
-//         }
-//     });
-//     displayEntries();
-// });
-
 // tags selected from an entry
 $(document).on('click', '.tags', function(){
     tags = $(this).text().replace('#', '');
@@ -101,19 +98,13 @@ $(document).on('click', '.tags', function(){
     displayEntries();
 });
 
-// $(document).on('click', '.cont-reading', function(){
 function contReading(id){
-    // $_SESSION['entryTitle'] = $('.entry-card-title').text();
-    // $_SESSION['entryId'] = $(this).attr('id');
-    // window.alert($_SESSION['entryTitle'] + " " + $_SESSION['entryId']);
-
-    // var entry_title = $('.entry-card-title').text();
     var entry_id = id;
 
     $.ajax({
         url:"save-entry-info.php",
         method:"POST",
-        data:{entry_id:entry_id},
+        data:{entry_id:entry_id,fromEntries:true},
 
         success:function(data){
             // parse the result
@@ -125,4 +116,73 @@ function contReading(id){
 
         }
     })
+}
+
+function deleteEntry(id){
+    var entry_id = id;
+
+    $.ajax({
+        url:"delete-entry.php",
+        method:"POST",
+        data:{entry_id:entry_id},
+
+        success:function(data){
+            // parse the result
+            var result = $.parseJSON(data);
+
+            if(result == 1){
+                displayEntries();
+            }
+
+        }
+    })
+}
+
+
+
+
+// get the popoup
+var popup = document.getElementById("popup");
+
+// retrieve the button that opens the popup
+var button = document.getElementById("create-post");
+
+// retrieve <span> element that closes the popup
+var span = document.getElementsByClassName("close")[0];
+
+// when the user clicks the button open the popup
+button.onclick = function() {
+  popup.style.display = "block";
+}
+
+// when the user clicks "x" close the popup
+span.onclick = function() {
+  popup.style.display = "none";
+  clearEntries();
+}
+
+// when the user clicks outside of the popup, close it
+window.onclick = function(event) {
+  if (event.target == popup) {
+    popup.style.display = "none";
+    clearEntries();
+  }
+}
+
+// clear the popup fields
+function clearEntries(){
+  // remove content from text fields
+  document.getElementById('title').value = '';
+  document.getElementById('date').value = '';
+  document.getElementById('hours').value = '';
+  document.getElementById('minutes').value = '';
+  document.getElementById('description').value = '';
+  document.getElementById('add-tags').value = '';
+
+  // unselect rating and visibility options
+  $('#entry-rating').find("input[type=radio]").prop("checked", "").end();
+  $('#entry-visibility').find("input[type=radio]").prop("checked", "").end();
+
+  // remove entered tags
+  $('.tag').remove();
 }

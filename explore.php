@@ -27,11 +27,6 @@
         <div class="body-wrapper">
             <header>
                 <!-- navigation -->
-                <!-- <nav>
-                    <a href="index.php">Home</a>
-                    <a href="explore.php">Explore</a>
-                    <a href="login.php">Login/Sign Up</a>
-                </nav> -->
                 <?php 
                     include("navigation-check.php"); 
                 ?>

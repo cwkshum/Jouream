@@ -55,7 +55,18 @@
 
             <!-- entry header -->
             <section id="header">
-                <h1><?php echo "< ".$entryTitle ?></h1>
+                <h1> 
+                <?php
+                    echo "<a href='";
+                    if($_SESSION['fromEntries'] == 'true'){
+                        echo "entries.php";
+                    } else{
+                        echo "explore.php";
+                    }
+                    echo "'>< " . $entryTitle . "</a>";
+
+                ?>
+                </h1>
             </section>
             
             <?php
