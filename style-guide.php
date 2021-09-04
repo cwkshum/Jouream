@@ -186,7 +186,7 @@
                     <div class="entry-card">
                         <h4 class="entry-card-title">Entry Title</h4>
                         <p class="entry-card-date">May 18, 2021</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium molestie lectus eget molestie. Aenean ac est...</p>
                         <p class="entry-card-tag">#teeth #supernatural</p>
 
                         <!-- divider -->
@@ -221,33 +221,107 @@
                     <div class="two-col">
                         <!-- first column -->
                         <div class="col-1"> 
-
                             <!-- text input and labels -->
                             <h3>Text Input & Label</h3>
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first-name" placeholder="First Name">
-
-                            <!-- emotion ratings -->
-                            <div id="ratings">
-                                <label>
-                                    <input type="radio" name="terrible" value="1">
-                                    <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle class="stroke" cx="25.0657" cy="25.5" r="23.4348"/>
-                                    <circle cx="16.4305" cy="24.4525" r="2.82018" fill="#646788"/>
-                                    <circle cx="34.3768" cy="24.4525" r="2.82018" fill="#646788"/>
-                                    <path d="M25.4024 28.8696C31.7329 28.8696 32.4785 34.2609 32.4785 34.2609L18.3263 34.2609C18.3263 34.2609 19.0719 28.8696 25.4024 28.8696Z" stroke="#646788" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <line x1="17.5285" y1="17.3288" x2="18.3335" y2="16.8641" stroke="#646788" stroke-width="3" stroke-linecap="round"/>
-                                    <line x1="32.5061" y1="16.864" x2="33.3111" y2="17.3288" stroke="#646788" stroke-width="3" stroke-linecap="round"/>
-                                    </svg>
-                                </label>
-                            </div>
-                            
+                            <input type="text" id="first-name" name="first-name" placeholder="First Name">  
                         </div>  
 
                         <div class="col-2"> 
                             <h3>Rating Input</h3>
+
+                             <!-- emotion ratings -->
+                             <div id="ratings">
+                                <!-- happy -->
+                                <label>
+                                    <input type="radio" name="rating" value="5" checked>
+                                    <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="stroke" cx="24.9348" cy="25.5" r="23.4348" stroke="#646788" stroke-width="3"/>
+                                        <circle class="eye" cx="16.2977" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <circle class="eye" cx="34.245" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <path d="M25.2714 36.2827C18.9409 36.2827 18.1953 30.8914 18.1953 30.8914H32.3475C32.3475 30.8914 31.6019 36.2827 25.2714 36.2827Z" stroke="#646788" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+
+                                <!-- okay -->
+                                <label>
+                                    <input type="radio" name="rating" value="4">
+                                    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="stroke" cx="25.217" cy="25.5" r="23.4348" stroke="#646788" stroke-width="3"/>
+                                        <circle class="eye" cx="16.5809" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <circle class="eye" cx="34.5282" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <path d="M19.1523 31.5652C19.1523 31.5652 21.1741 34.2602 25.7187 34.2602C29.935 34.2602 31.9567 31.5652 31.9567 31.5652" stroke="#646788" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+
+                                <!-- neutral -->
+                                <label>
+                                    <input type="radio" name="rating" value="3">
+                                    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="stroke" cx="25.5002" cy="25.5" r="23.4348" stroke="#646788" stroke-width="3"/>
+                                        <circle class="eye" cx="16.8651" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <circle class="eye" cx="34.8114" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <line x1="20.9346" y1="31.4131" x2="30.7389" y2="31.4131" stroke="#646788" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </label>
+
+                                <!-- sad -->
+                                <label>
+                                    <input type="radio" name="rating" value="2">
+                                    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="stroke" cx="25.7825" cy="25.5" r="23.4348" stroke="#646788" stroke-width="3"/>
+                                        <circle class="eye" cx="17.1464" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <circle class="eye" cx="35.0926" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <path d="M32.5215 32.9124C32.5215 32.9124 30.4997 30.2174 25.9551 30.2174C21.7389 30.2174 19.7171 32.9124 19.7171 32.9124" stroke="#646788" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+
+                                <!-- terrible -->
+                                <label>
+                                    <input type="radio" name="rating" value="1">
+                                    <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="stroke" cx="25.0657" cy="25.5" r="23.4348"/>
+                                        <circle class="eye" cx="16.4305" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <circle class="eye" cx="34.3768" cy="24.4525" r="2.82018" fill="#646788"/>
+                                        <path d="M25.4024 28.8696C31.7329 28.8696 32.4785 34.2609 32.4785 34.2609L18.3263 34.2609C18.3263 34.2609 19.0719 28.8696 25.4024 28.8696Z" stroke="#646788" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <line x1="17.5285" y1="17.3288" x2="18.3335" y2="16.8641" stroke="#646788" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="32.5061" y1="16.864" x2="33.3111" y2="17.3288" stroke="#646788" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </label>
+                            </div>
                         </div> 
                     </div>
+
+                    <div class="three-col">
+                        <!-- date input -->
+                        <div class="col-1">
+                            <h3>Date</h3>
+                            <input type="date" value="<?php echo date('Y-m-d'); ?>" />
+                        </div>
+
+                        <!-- duration -->
+                        <div class="col-2 duration">
+                            <h3>Duration Input</h3>
+                            <input type="number" name="hour"/> <p>hrs</p>
+                            <input type="number" name="minute"/> <p>mins</p>
+                        </div>
+
+                        <!-- radio buttons -->
+                        <div class="col-3 visibility">
+                            <h3>Radio Button</h3>
+                            <!-- private -->
+                            <input type="radio" id="private" name="visibility" value="private" checked>
+                            <label for="private">Private</label>
+
+                            <!-- public -->
+                            <input type="radio" id="public" name="visibility" value="public">
+                            <label for="public">Public</label>
+                        </div>
+                    </div>
+
+                    <!-- description text box -->
+                    <h3>Description</h3>
+                    <input type="text" id="description" name="description">
                     
                     <!-- element notes -->
                     <div class="comments">

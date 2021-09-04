@@ -225,12 +225,23 @@ h1#login, h1#signup {
     grid-column-gap: 4rem;
 }
 
+/* three column layout within ui examples */
+.three-col {
+    display: grid; 
+    grid-template-columns: auto auto 1fr; 
+    grid-column-gap: 2rem;
+}
+
 .col-1 {
     grid-column: 1 / 2;
 }
 
 .col-2 {
     grid-column: 2 / 3;
+}
+
+.col-3 {
+    grid-column: 3 / 4;
 }
 
 #color-palette .two-col {
