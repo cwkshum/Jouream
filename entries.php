@@ -22,7 +22,6 @@
         <link rel="stylesheet" type="text/css" href="css/main.css"> 
         <link rel="stylesheet" type="text/css" href="css/grids.css">
         <link rel="stylesheet" type="text/css" href="css/entries.css">
-
     </head>
 
     <body class="main-body-grid">

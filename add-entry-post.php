@@ -120,7 +120,6 @@
         // send a JSON encoded array to client
         echo json_encode($result);
 
-
         // close the database connection
         $connection->close();
         

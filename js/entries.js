@@ -25,9 +25,9 @@ function displayEntries(){
             // display entries
             $.each(result, function(key, value){
 
-                string += '<div class="entry-card">';
-                    string += '<p id="' + value['entry_id'] + '" onclick="deleteEntry(this.id)">delete</p>';
-                    string += '<p>edit</p>';
+                string += '<div id="' + value['entry_id'] + '" class="entry-card">';
+                    string += '<p id="delete-entry">delete</p>';
+                    string += '<p id="edit-entry">edit</p>';
                     // string += '<p>make public</p>';
 
                     // Entry Title
@@ -60,7 +60,7 @@ function displayEntries(){
                     }
 
                     // Entry Link
-                    string += '</a><hr class="entry-card-line"><div class="cont-reading"><p id="' + value['entry_id'] + '" class="entry-card-link" onclick="contReading(this.id)">';
+                    string += '</a><hr class="entry-card-line"><div class="cont-reading"><p class="entry-card-link">';
 
                     // Continue Reading
                     string += 'continue reading <img src="img/right-arrow.svg" alt="right arrow icon"></p></div>';
@@ -98,28 +98,8 @@ $(document).on('click', '.tags', function(){
     displayEntries();
 });
 
-function contReading(id){
-    var entry_id = id;
-
-    $.ajax({
-        url:"save-entry-info.php",
-        method:"POST",
-        data:{entry_id:entry_id,fromEntries:true},
-
-        success:function(data){
-            // parse the result
-            var result = $.parseJSON(data);
-
-            if(result == 1){
-                window.location.replace("entry.php");
-            }
-
-        }
-    })
-}
-
-function deleteEntry(id){
-    var entry_id = id;
+$(document).on('click', '#delete-entry', function() {
+    var entry_id = $(this).closest('.entry-card').attr('id');
 
     $.ajax({
         url:"delete-entry.php",
@@ -136,7 +116,68 @@ function deleteEntry(id){
 
         }
     })
-}
+});
+
+$(document).on('click', '#edit-entry', function() {
+    var entry_id = $(this).closest('.entry-card').attr('id');
+
+    $.ajax({
+        url:"edit-entry.php",
+        method:"POST",
+        data:{entry_id:entry_id},
+
+        success:function(data){
+            // parse the result
+            var result = $.parseJSON(data);
+
+            if(result == 1){
+                displayEntries();
+            }
+
+        }
+    })
+});
+
+$(document).on('click', '.cont-reading', function() {
+    var entry_id = $(this).closest('.entry-card').attr('id');
+
+    $.ajax({
+        url:"save-entry-info.php",
+        method:"POST",
+        data:{entry_id:entry_id,fromEntries:true},
+
+        success:function(data){
+            // parse the result
+            var result = $.parseJSON(data);
+
+            if(result == 1){
+                window.location.replace("entry.php");
+            }
+
+        }
+    })
+});
+
+// function confirmDelete(id){
+//     // popup content
+//     var string = '<div class="popup-content">';
+
+//     //exit button
+//     string += '<span class="close">&times;</span>';
+//     string += '<div id="entry-form"><p>Are you sure you want to delete this entry?</p>';
+    
+//     string += '<div id="entry-actions">';
+//     // cancel button
+//     string += '<button type="button" id="cancel">Cancel</button>';
+//     // delete button
+//     string += '<button type="button" id="delete">Delete Entry</button></div></div></div>';
+            
+//     $(".popup-container").html(string);
+//     popup.style.display = "block";
+// }
+
+
+
 
 
 
@@ -163,10 +204,10 @@ span.onclick = function() {
 
 // when the user clicks outside of the popup, close it
 window.onclick = function(event) {
-  if (event.target == popup) {
-    popup.style.display = "none";
-    clearEntries();
-  }
+    if (event.target == popup) {
+        popup.style.display = "none";
+        clearEntries();
+    }
 }
 
 // clear the popup fields
